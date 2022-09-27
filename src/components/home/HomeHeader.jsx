@@ -17,7 +17,7 @@ const HomeHeader = () => {
   });
 
   return (
-    <header id="home__header">
+    <header id="home_header">
       <img src={BG} alt="bg-header" id="header_img" />
       <div className="container header__container" id="header_text">
         <h5>Hello I'm</h5>
