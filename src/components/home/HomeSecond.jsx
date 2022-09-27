@@ -10,19 +10,19 @@ const HomeSecond = () => {
   return (
     <>
       <section id="home_second-d" className="isDesktop">
-        <div className="container project__container">
-          <div className="project__title">
+        <div className="container works__container">
+          <div className="works__title">
             <h5>These are my</h5>
             <h2>Prided Works</h2>
           </div>
 
-          <div className="project__item item_left">
-            <div className="project__item-image">
+          <div className="works__item item_left">
+            <div className="works__item-image">
               <img src={IMG1} alt="mbaling-desktop" />
             </div>
-            <div className="project__info">
+            <div className="works__info">
               <h3>mBALING (Desktop)</h3>
-              <div className="project__cta">
+              <div className="works__cta">
                 <a
                   href="https://github.com/amsolaiman/mbaling-project-client-desktop"
                   className="btn"
@@ -38,13 +38,13 @@ const HomeSecond = () => {
               </div>
             </div>
           </div>
-          <div className="project__item item_right">
-            <div className="project__item-image">
+          <div className="works__item item_right">
+            <div className="works__item-image">
               <img src={IMG2} alt="mbaling-mobile" />
             </div>
-            <div className="project__info">
+            <div className="works__info">
               <h3>mBALING (Mobile)</h3>
-              <div className="project__cta">
+              <div className="works__cta">
                 <a
                   href="https://github.com/amsolaiman/mbaling-project-client-mobile"
                   className="btn"
@@ -61,7 +61,7 @@ const HomeSecond = () => {
             </div>
           </div>
 
-          <div className="project__notes">
+          <div className="works__notes">
             <small>Some projects are restricted by NDA.</small>
             <Link to="/project" className="btn btn-primary">
               View more
@@ -74,15 +74,15 @@ const HomeSecond = () => {
         <h5>These are my</h5>
         <h2>Prided Works</h2>
 
-        <div className="container project__container">
-          <div className="project__grid">
-            <div className="project__item">
-              <div className="project__item-image">
+        <div className="container works__container">
+          <div className="works__grid">
+            <div className="works__item">
+              <div className="works__item-image">
                 <img src={IMG1} alt="mbaling-desktop" />
               </div>
-              <div className="project__info">
+              <div className="works__info">
                 <h4>mBALING (Desktop)</h4>
-                <div className="project__cta">
+                <div className="works__cta">
                   <a
                     href="https://github.com/amsolaiman/mbaling-project-client-desktop"
                     className="btn"
@@ -98,13 +98,13 @@ const HomeSecond = () => {
                 </div>
               </div>
             </div>
-            <div className="project__item">
-              <div className="project__item-image">
+            <div className="works__item">
+              <div className="works__item-image">
                 <img src={IMG2} alt="mbaling-mobile" />
               </div>
-              <div className="project__info">
+              <div className="works__info">
                 <h4>mBALING (Mobile)</h4>
-                <div className="project__cta">
+                <div className="works__cta">
                   <a
                     href="https://github.com/amsolaiman/mbaling-project-client-mobile"
                     className="btn"
@@ -122,7 +122,7 @@ const HomeSecond = () => {
             </div>
           </div>
 
-          <div className="project__notes">
+          <div className="works__notes">
             <small>Some projects are restricted by NDA.</small>
             <Link to="/project" className="btn btn-primary">
               View more
