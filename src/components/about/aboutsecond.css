@@ -13,10 +13,9 @@
 }
 
 .interest__container > div:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
   cursor: default;
   transform: translateY(-12px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.7) !important;
 }
 
 .interest__container > div h3 {
@@ -53,6 +52,8 @@
   }
 
   .interest__container > div:hover {
+    border: 1px solid transparent;
+    background: var(--color-bg-variant);
     transform: translateY(0);
   }
 }
