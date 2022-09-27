@@ -42,7 +42,7 @@ const AboutFirst = () => {
             expertise.
           </p>
 
-          <Link to="/contact" className="btn btn-primary">
+          <Link to="my-portfolio-website/contact" className="btn btn-primary">
             Let's talk
           </Link>
         </div>

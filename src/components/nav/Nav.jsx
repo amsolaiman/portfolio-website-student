@@ -13,19 +13,19 @@ import {
 const Nav = ({ className }) => {
   return (
     <nav className={className}>
-      <NavLink to="/">
+      <NavLink to="my-portfolio-website/">
         <BiHome />
       </NavLink>
-      <NavLink to="/about">
+      <NavLink to="my-portfolio-website/about">
         <BiUser />
       </NavLink>
-      <NavLink to="/project">
+      <NavLink to="my-portfolio-website/project">
         <BiBriefcase />
       </NavLink>
-      <NavLink to="/service">
+      <NavLink to="my-portfolio-website/service">
         <BiPalette />
       </NavLink>
-      <NavLink to="/contact">
+      <NavLink to="my-portfolio-website/contact">
         <BiMessageSquareDetail />
       </NavLink>
     </nav>
