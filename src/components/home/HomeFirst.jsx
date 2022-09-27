@@ -80,7 +80,7 @@ const HomeFirst = () => {
             </p>
             <div className="intro__content-cta">
               <Link to="/about" className="btn btn-primary">
-                About Me
+                About me
               </Link>
               <Link to="/service" className="btn">
                 Services
@@ -106,7 +106,7 @@ const HomeFirst = () => {
             </p>
             <div className="intro__content-cta">
               <Link to="/about" className="btn btn-primary">
-                About Me
+                About me
               </Link>
               <Link to="/service" className="btn">
                 Services
