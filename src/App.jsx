@@ -1,5 +1,5 @@
 import React, { useState, useRef, useMemo, useEffect } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import "./index.css";
 
 import Home from "./pages/Home";
@@ -44,7 +44,7 @@ const App = () => {
   return (
     <>
       <Nav className={atFooter ? "nav__atfooter" : ""} />
-      <div>
+      <ScrollToTop>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -53,7 +53,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-      </div>
+      </ScrollToTop>
       <div ref={targetRef}>
         <Footer />
       </div>
@@ -62,3 +62,13 @@ const App = () => {
 };
 
 export default App;
+
+const ScrollToTop = (props) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return <>{props.children}</>;
+};
