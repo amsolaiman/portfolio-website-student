@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+
+import ProjectHeader from "../components/project/ProjectHeader";
 
 const Project = () => {
   return (
-    <div>Project</div>
-  )
-}
+    <>
+      <ProjectHeader />
+    </>
+  );
+};
 
-export default Project
+export default Project;

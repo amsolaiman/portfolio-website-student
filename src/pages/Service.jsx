@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+
+import ServiceHeader from "../components/service/ServiceHeader";
 
 const Service = () => {
   return (
-    <div>Service</div>
-  )
-}
+    <>
+      <ServiceHeader />
+    </>
+  );
+};
 
-export default Service
+export default Service;
