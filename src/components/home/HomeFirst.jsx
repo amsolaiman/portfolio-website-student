@@ -79,10 +79,10 @@ const HomeFirst = () => {
               a few organizations with their needs for digital design support.
             </p>
             <div className="intro__content-cta">
-              <Link to="my-portfolio-website/about" className="btn btn-primary">
+              <Link to="/about" className="btn btn-primary">
                 About me
               </Link>
-              <Link to="my-portfolio-website/service" className="btn">
+              <Link to="/service" className="btn">
                 Services
               </Link>
             </div>
@@ -105,10 +105,10 @@ const HomeFirst = () => {
               a few organizations with their needs for digital design support.
             </p>
             <div className="intro__content-cta">
-              <Link to="my-portfolio-website/about" className="btn btn-primary">
+              <Link to="/about" className="btn btn-primary">
                 About me
               </Link>
-              <Link to="my-portfolio-website/service" className="btn">
+              <Link to="/service" className="btn">
                 Services
               </Link>
             </div>

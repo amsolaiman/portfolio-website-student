@@ -63,7 +63,7 @@ const HomeSecond = () => {
 
           <div className="works__notes">
             <small>Some projects are restricted by NDA.</small>
-            <Link to="my-portfolio-website/project" className="btn btn-primary">
+            <Link to="/project" className="btn btn-primary">
               View more
             </Link>
           </div>
@@ -124,7 +124,7 @@ const HomeSecond = () => {
 
           <div className="works__notes">
             <small>Some projects are restricted by NDA.</small>
-            <Link to="my-portfolio-website/project" className="btn btn-primary">
+            <Link to="/project" className="btn btn-primary">
               View more
             </Link>
           </div>
