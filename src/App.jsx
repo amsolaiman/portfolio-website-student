@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -15,11 +15,12 @@ const App = () => {
       <Nav />
       <div>
         <Routes>
-          <Route path="/my-portfolio-website/" element={<Home />} />
-          <Route path="/my-portfolio-website/about" element={<About />} />
-          <Route path="/my-portfolio-website/project" element={<Project />} />
-          <Route path="/my-portfolio-website/service" element={<Service />} />
-          <Route path="/my-portfolio-website/contact" element={<Contact />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
       <div>

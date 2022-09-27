@@ -45,7 +45,7 @@ const HomeHeader = () => {
           >
             Download CV
           </a>
-          <Link to="/my-portfolio-website/contact" className="btn btn-contact">
+          <Link to="/contact" className="btn btn-contact">
             Let's talk
           </Link>
         </div>
