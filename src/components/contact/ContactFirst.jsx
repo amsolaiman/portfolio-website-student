@@ -49,7 +49,7 @@ const ContactFirst = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Send a message
+              Send an email
             </a>
           </article>
           <article className="contact__option">

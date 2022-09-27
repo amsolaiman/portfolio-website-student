@@ -81,7 +81,7 @@ const HomeSecond = () => {
                 <img src={IMG1} alt="mbaling-desktop" />
               </div>
               <div className="project__info">
-                <h3>mBALING (Desktop)</h3>
+                <h4>mBALING (Desktop)</h4>
                 <div className="project__cta">
                   <a
                     href="https://github.com/amsolaiman/mbaling-project-client-desktop"
@@ -103,7 +103,7 @@ const HomeSecond = () => {
                 <img src={IMG2} alt="mbaling-mobile" />
               </div>
               <div className="project__info">
-                <h3>mBALING (Mobile)</h3>
+                <h4>mBALING (Mobile)</h4>
                 <div className="project__cta">
                   <a
                     href="https://github.com/amsolaiman/mbaling-project-client-mobile"
