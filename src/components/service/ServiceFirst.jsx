@@ -53,7 +53,7 @@ const ServiceFirst = () => {
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Tarpaulin/poster editing</p>
+              <p>Tarpaulin/poster/pamphlets etc.</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
@@ -61,7 +61,7 @@ const ServiceFirst = () => {
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>PowerPoint layouts & editing</p>
+              <p>PowerPoint templates & editing</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />

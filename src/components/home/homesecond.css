@@ -135,7 +135,7 @@
 
 #home_second-m .works__info {
   display: block;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
 }
 
 #home_second-m .works__cta {
@@ -167,10 +167,6 @@
 
   #home_second-m .works__grid {
     grid-template-columns: 1fr;
-  }
-
-  #home_second-m .works__info {
-    padding: 0 1.7rem;
   }
 
   #home_second-m .works__notes {
