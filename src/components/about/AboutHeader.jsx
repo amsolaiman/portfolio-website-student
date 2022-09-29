@@ -30,10 +30,9 @@ const AboutHeader = () => {
               delay: 40,
               strings: [
                 "Nyke Moiz hen Solaiman Lentrot.",
-                "<DB18/>",
                 "I prefer minimalistic designs.",
                 "My MBTI is INFJ-T.",
-                "I'm a bit perfectionistic btw."
+                "I'm a bit perfectionistic btw.",
               ],
             }}
           />

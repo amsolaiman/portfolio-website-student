@@ -36,14 +36,19 @@ const ProjectFirst = () => {
                   })}
                 </div>
                 <div className="project__content-cta">
-                  <a
-                    href={project.link}
-                    className="btn"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    GitHub
-                  </a>
+                  {project.links.map(({ type, link }, index) => {
+                    return (
+                      <a
+                        key={index}
+                        href={link}
+                        className="btn"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {type}
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -65,7 +70,6 @@ const data = [
     name: "mBALING (Desktop)",
     status: "Capstone Project",
     description: `A student housing management system for on-campus housing firms in the Mindanao State University campus. This is the desktop system of the project that administers the user records and the creation and deletion of user accounts.`,
-    link: "https://github.com/amsolaiman/mbaling-project-client-desktop",
     alt: "mbaling-desktop",
     techs: [
       {
@@ -84,13 +88,22 @@ const data = [
         icon: <SiMysql />,
       },
     ],
+    links: [
+      {
+        type: "GitHub",
+        link: "https://github.com/amsolaiman/mbaling-project-client-desktop",
+      },
+      {
+        type: "Abstract",
+        link: "https://docs.google.com/document/d/1Afgxo2BnDnE0YIqH5ZKp1AysD7vJu5Uk/edit?usp=sharing&ouid=117078887115328947363&rtpof=true&sd=true",
+      },
+    ],
   },
   {
     image: IMG2,
     name: "mBALING (Mobile)",
     status: "Capstone Project",
     description: `A student housing management system for on-campus housing firms in the Mindanao State University campus. This is the mobile system of the project that manages the activities and displays the content posted by the users.`,
-    link: "https://github.com/amsolaiman/mbaling-project-client-mobile",
     alt: "mbaling-mobile",
     techs: [
       {
@@ -107,6 +120,16 @@ const data = [
       },
       {
         icon: <SiMysql />,
+      },
+    ],
+    links: [
+      {
+        type: "GitHub",
+        link: "https://github.com/amsolaiman/mbaling-project-client-mobile",
+      },
+      {
+        type: "Abstract",
+        link: "https://docs.google.com/document/d/1Afgxo2BnDnE0YIqH5ZKp1AysD7vJu5Uk/edit?usp=sharing&ouid=117078887115328947363&rtpof=true&sd=true",
       },
     ],
   },
