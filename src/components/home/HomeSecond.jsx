@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./homesecond.css";
+import "./homesecond.scss";
 
 import { SiNestjs, SiQuasar } from "react-icons/si";
 import IMG1 from "../../assets/project1.jpg";
@@ -9,7 +9,8 @@ import IMG2 from "../../assets/project2.jpg";
 const HomeSecond = () => {
   return (
     <>
-      <section id="home_second-d" className="isDesktop">
+      {/* #home_second desktop section */}
+      <section id="home_second-d">
         <div className="container works__container">
           <div className="works__title">
             <h5>These are my</h5>
@@ -70,7 +71,8 @@ const HomeSecond = () => {
         </div>
       </section>
 
-      <section id="home_second-m" className="isMobile">
+      {/* #home_second mobile section */}
+      <section id="home_second-m">
         <h5>These are my</h5>
         <h2>Prided Works</h2>
 

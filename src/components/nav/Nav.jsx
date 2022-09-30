@@ -1,5 +1,5 @@
 import React from "react";
-import "./nav.css";
+import "./nav.scss";
 
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import {

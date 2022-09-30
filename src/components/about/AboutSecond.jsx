@@ -1,5 +1,5 @@
 import React from "react";
-import "./aboutsecond.css";
+import "./aboutsecond.scss";
 
 import { BsPatchCheckFill } from "react-icons/bs";
 

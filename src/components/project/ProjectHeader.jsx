@@ -1,7 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import { Link, useNavigate } from "react-router-dom";
-import "./projectheader.css";
+import "./projectheader.scss";
 
 import { BsArrowUp } from "react-icons/bs";
 import BG from "../../assets/bg-header.jpg";

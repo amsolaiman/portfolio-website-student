@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./homefirst.css";
+import "./homefirst.scss";
 
 import { FaCode, FaGraduationCap, FaQuoteRight } from "react-icons/fa";
 import { IoColorPaletteSharp } from "react-icons/io5";
@@ -21,7 +21,8 @@ import {
 const HomeFirst = () => {
   return (
     <>
-      <section id="home_first-d" className="isDesktop">
+      {/* #home_first desktop section */}
+      <section id="home_first-d">
         <div className="container intro__container">
           <div className="intro__cards">
             <article className="intro__card">
@@ -90,7 +91,8 @@ const HomeFirst = () => {
         </div>
       </section>
 
-      <section id="home_first-m" className="isMobile">
+      {/* #home_first mobile section */}
+      <section id="home_first-m">
         <h5>Greetings from</h5>
         <h2>JASAFANAR WORKSHOP</h2>
 

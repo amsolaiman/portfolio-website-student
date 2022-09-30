@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
-import "./contactfirst.css";
+import "./contactfirst.scss";
 
 import {
   AiOutlineMail,

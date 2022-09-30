@@ -1,5 +1,5 @@
 import React from "react";
-import "./servicefirst.css";
+import "./servicefirst.scss";
 
 import { BiCheck } from "react-icons/bi";
 

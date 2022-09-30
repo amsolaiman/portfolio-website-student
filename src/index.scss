@@ -62,17 +62,17 @@ h1 {
 section {
   padding-top: 4rem;
   margin-bottom: 7rem;
-}
 
-section > h2,
-section > h5 {
-  text-align: center;
-  color: var(--color-light);
-}
+  h2,
+  h5 {
+    text-align: center;
+    color: var(--color-light);
+  }
 
-section > h2 {
-  color: var(--color-primary);
-  margin-bottom: 3rem;
+  h2 {
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+  }
 }
 
 .text-align {
@@ -82,10 +82,10 @@ section > h2 {
 a {
   color: var(--color-primary);
   transition: var(--transition);
-}
 
-a:hover {
-  color: var(--color-white);
+  &:hover {
+    color: var(--color-white);
+  }
 }
 
 .btn {
@@ -97,12 +97,12 @@ a:hover {
   cursor: pointer;
   border: 1px solid var(--color-primary);
   transition: var(--transition);
-}
 
-.btn:hover {
-  background: var(--color-white);
-  color: var(--color-bg);
-  border-color: transparent;
+  &:hover {
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+  }
 }
 
 .btn-primary {
@@ -136,7 +136,9 @@ img {
     width: var(--container-width-sm);
   }
 
-  section > h2 {
-    margin-bottom: 2rem;
+  section {
+    h2 {
+      margin-bottom: 2rem;
+    }
   }
 }

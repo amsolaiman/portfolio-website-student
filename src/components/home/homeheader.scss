@@ -1,0 +1,144 @@
+#home_header {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1400px;
+    background: linear-gradient(
+      to bottom,
+      rgba(17, 17, 17, 0) 0%,
+      rgba(17, 17, 17, 0) 50%,
+      rgba(17, 17, 17, 0.3) 80%,
+      #111 100%
+    );
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  .header__container {
+    padding-top: 2rem;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    transform: translate(0, 50%);
+    z-index: 1;
+  }
+
+  .header__cta {
+    margin-top: 2.5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+
+    .btn-cv {
+      color: var(--color-light);
+      border: 1.7px solid var(--color-light);
+
+      &:hover {
+        color: var(--color-bg);
+        border-color: transparent;
+      }
+    }
+
+    .btn-contact {
+      display: none;
+      border-color: transparent;
+      background: var(--color-light);
+      color: var(--color-bg);
+
+      &:hover {
+        background: var(--color-white);
+      }
+    }
+  }
+
+  .header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 2rem;
+      background: var(--color-light);
+    }
+
+    a {
+      color: var(--color-light);
+
+      &:hover {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  .scroll__down {
+    color: var(--color-light);
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #home_header {
+    .header__container {
+      padding-top: 10rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #home_header {
+    .header__container {
+      padding-top: 4rem;
+
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
+
+    .header__cta {
+      padding-bottom: 2rem;
+
+      .btn-contact {
+        display: block;
+      }
+    }
+
+    .header__socials,
+    .scroll__down {
+      display: none;
+    }
+  }
+}

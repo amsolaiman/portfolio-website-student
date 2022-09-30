@@ -1,5 +1,5 @@
 import React from "react";
-import "./projectfirst.css";
+import "./projectfirst.scss";
 
 import {
   SiMysql,

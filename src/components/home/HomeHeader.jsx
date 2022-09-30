@@ -1,7 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
-import "./homeheader.css";
+import "./homeheader.scss";
 
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import BG from "../../assets/bg-header.jpg";
