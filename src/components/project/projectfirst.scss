@@ -124,12 +124,6 @@
     font-size: 0.8rem;
     margin: 0.4rem 0 1rem;
     color: var(--color-light);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    line-clamp: 6;
-    -webkit-box-orient: vertical;
 
     span {
       color: var(--color-primary);

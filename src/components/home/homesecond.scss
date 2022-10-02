@@ -60,12 +60,6 @@
 
       h3 {
         margin: 1.2rem 0 1rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        line-clamp: 1;
-        -webkit-box-orient: vertical;
       }
 
       .project__cta {
@@ -140,12 +134,6 @@
 
         h3 {
           margin: 1.2rem 0 1rem;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 1;
-          line-clamp: 1;
-          -webkit-box-orient: vertical;
         }
 
         .project__cta {

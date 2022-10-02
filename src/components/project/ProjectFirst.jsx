@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./projectfirst.scss";
 
 import {
+  SiAdobeillustrator,
   SiMysql,
   SiNestjs,
   SiQuasar,
@@ -10,10 +11,25 @@ import {
 } from "react-icons/si";
 import IMG1 from "../../assets/project1.jpg";
 import IMG2 from "../../assets/project2.jpg";
+import IMG3 from "../../assets/project3.jpg";
 
 const ProjectFirst = () => {
   const [openModal, setOpenModal] = useState(false);
   const [modalIndex, setModalIndex] = useState(0);
+
+  const modalCloseHandler = () => {
+    setOpenModal(false);
+
+    document.body.style.overflow = "unset";
+  };
+
+  const modalOpenHandler = () => {
+    setOpenModal(true);
+
+    if (typeof window != "undefined" && window.document) {
+      document.body.style.overflow = "hidden";
+    }
+  };
 
   return (
     <section>
@@ -34,7 +50,7 @@ const ProjectFirst = () => {
                   <div className="portfolio__content-cta">
                     <button
                       onClick={() => {
-                        setOpenModal(true);
+                        modalOpenHandler();
                         setModalIndex(index);
                       }}
                       className="btn"
@@ -55,7 +71,7 @@ const ProjectFirst = () => {
               <Modal
                 openModal={openModal}
                 modalIndex={modalIndex}
-                closeModal={() => setOpenModal(false)}
+                closeModal={() => modalCloseHandler()}
               />
             </>
           );
@@ -187,6 +203,24 @@ const data = [
       {
         type: "Abstract",
         link: "https://docs.google.com/document/d/1Afgxo2BnDnE0YIqH5ZKp1AysD7vJu5Uk/edit?usp=sharing&ouid=117078887115328947363&rtpof=true&sd=true",
+      },
+    ],
+  },
+  {
+    image: IMG3,
+    name: "MSU-SPFC Logo",
+    type: "Logo Design",
+    description: `MSU Student Peer Facilitators' Circle is a student support program established by the Mindanao State University-Division of Student Affairs. This logo was designed using Adobe Illustrator and consists of outlined and non-outlined variations.`,
+    alt: "spfc-logo",
+    techs: [
+      {
+        icon: <SiAdobeillustrator />,
+      },
+    ],
+    links: [
+      {
+        type: "Visit page",
+        link: "https://www.facebook.com/MSUDSASPFC",
       },
     ],
   },
