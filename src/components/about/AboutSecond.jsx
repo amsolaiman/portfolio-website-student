@@ -1,47 +1,72 @@
 import React from "react";
 import "./aboutsecond.scss";
 
-import { BsPatchCheckFill } from "react-icons/bs";
+import {
+  SiAdobeillustrator,
+  SiAdobephotoshop,
+  SiAdobepremierepro,
+  SiAdobexd,
+  SiAutodesk,
+  SiCsharp,
+  SiCss3,
+  SiGit,
+  SiHtml5,
+  SiJava,
+  SiJavascript,
+  SiMaterialui,
+  SiNodedotjs,
+  SiQuasar,
+  SiReact,
+  SiSass,
+  SiSketchup,
+  SiTypescript,
+  SiUnity,
+  SiVuedotjs,
+} from "react-icons/si";
 
 const AboutSecond = () => {
   return (
     <section>
       <h5>Skills I have</h5>
-      <h2>Interests</h2>
+      <h2>Experiences</h2>
 
-      <div className="container interest__container">
-        <div className="interest__language">
-          <h3>Languages</h3>
-          <div className="interest__content">
-            {language.map(({ title, caption }, index) => {
-              return (
-                <article key={index} className="interest__details">
-                  <BsPatchCheckFill className="interest__details-icon" />
-                  <div>
-                    <h4>{title}</h4>
-                    <small className="text-light">{caption}</small>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
+      <div className="container experience__container">
+        <div className="experience__skills">
+          {skills.map(({ name, icon }, index) => {
+            return (
+              <div key={index} className="skills__icon">
+                {icon}
+              </div>
+            );
+          })}
         </div>
 
-        <div className="interest__framework">
-          <h3>Technologies</h3>
-          <div className="interest__content">
-            {technology.map(({ title, caption }, index) => {
-              return (
-                <article key={index} className="interest__details">
-                  <BsPatchCheckFill className="interest__details-icon" />
-                  <div>
-                    <h4>{title}</h4>
-                    <small className="text-light">{caption}</small>
+        <div className="experience__works">
+          {works.map((year, index) => {
+            return (
+              <>
+                <div key={index} className="work__container">
+                  <div className="work__container-year">
+                    <h3>{year.year}</h3>
                   </div>
-                </article>
-              );
-            })}
-          </div>
+                  <div className="work__container-content">
+                    {year.jobs.map((job, index) => {
+                      return (
+                        <div key={index} className="work__item">
+                          <h4>{job.name}</h4>
+                          <div>
+                            <b>{job.employer}</b>
+                          </div>
+                          <div>{job.type}</div>
+                          <div>{job.duration}</div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -50,52 +75,116 @@ const AboutSecond = () => {
 
 export default AboutSecond;
 
-const language = [
+const skills = [
   {
-    title: "Java",
-    caption: "Intermediate",
+    name: "React JS",
+    icon: <SiReact />,
   },
   {
-    title: "C#",
-    caption: "Beginner",
+    name: "C#",
+    icon: <SiCsharp />,
   },
   {
-    title: "HTML",
-    caption: "Experienced",
+    name: "Adobe Photoshop",
+    icon: <SiAdobephotoshop />,
   },
   {
-    title: "CSS",
-    caption: "Intermediate",
+    name: "Material UI",
+    icon: <SiMaterialui />,
   },
   {
-    title: "JavaScript",
-    caption: "Intermediate",
+    name: "HTML5",
+    icon: <SiHtml5 />,
   },
   {
-    title: "MySQL",
-    caption: "Intermediate",
+    name: "Typescript",
+    icon: <SiTypescript />,
+  },
+  {
+    name: "Quasar Framework",
+    icon: <SiQuasar />,
+  },
+  {
+    name: "Node JS",
+    icon: <SiNodedotjs />,
+  },
+  {
+    name: "Vue",
+    icon: <SiVuedotjs />,
+  },
+  {
+    name: "Javascript",
+    icon: <SiJavascript />,
+  },
+  {
+    name: "Java",
+    icon: <SiJava />,
+  },
+  {
+    name: "Unity",
+    icon: <SiUnity />,
+  },
+  {
+    name: "SketchUp",
+    icon: <SiSketchup />,
+  },
+  {
+    name: "Adobe Illustrator",
+    icon: <SiAdobeillustrator />,
+  },
+  {
+    name: "CSS3",
+    icon: <SiCss3 />,
+  },
+  {
+    name: "Adobe XD",
+    icon: <SiAdobexd />,
+  },
+  {
+    name: "Adove Premiere Pro",
+    icon: <SiAdobepremierepro />,
+  },
+  {
+    name: "Git",
+    icon: <SiGit />,
+  },
+  {
+    name: "Sass",
+    icon: <SiSass />,
+  },
+  {
+    name: "AutoCAD",
+    icon: <SiAutodesk />,
   },
 ];
 
-const technology = [
+const works = [
   {
-    title: "ReactJS",
-    caption: "Intermediate",
+    year: 2018,
+    jobs: [
+      {
+        name: "Graphic Designer/Editor",
+        type: "Freelance",
+        employer: "",
+        duration: "2018 - present",
+      },
+      {
+        name: "BS Information Technology (Database Systems)",
+        type: "Student",
+        employer: "College of Information and Computing Sciences",
+        duration: "Aug 2018 - Feb 2023",
+      },
+    ],
   },
   {
-    title: "VueJS",
-    caption: "Experienced",
-  },
-  {
-    title: "Material-UI",
-    caption: "Beginner",
-  },
-  {
-    title: "Quasar",
-    caption: "Experienced",
-  },
-  {
-    title: "Unity",
-    caption: "Beginner",
+    year: 2022,
+    jobs: [
+      {
+        name: "Frontend Web Developer",
+        type: "Internship",
+        employer: "AP Global IT Solutions Inc.",
+        duration: "Sept 2022 - Nov 2022",
+      },
+    ],
   },
 ];
