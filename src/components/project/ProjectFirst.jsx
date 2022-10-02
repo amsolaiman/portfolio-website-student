@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Backdrop, Fade, Modal } from "@mui/material";
 import "./projectfirst.scss";
 
 import {
@@ -17,123 +18,115 @@ const ProjectFirst = () => {
   const [openModal, setOpenModal] = useState(false);
   const [modalIndex, setModalIndex] = useState(0);
 
-  const modalCloseHandler = () => {
-    setOpenModal(false);
-
-    document.body.style.overflow = "unset";
-  };
-
-  const modalOpenHandler = () => {
-    setOpenModal(true);
-
-    if (typeof window != "undefined" && window.document) {
-      document.body.style.overflow = "hidden";
-    }
-  };
-
   return (
-    <section>
-      <h5>Recent works</h5>
-      <h2>Portfolio</h2>
+    <>
+      <section>
+        <h5>Recent works</h5>
+        <h2>Portfolio</h2>
 
-      <div className="container portfolio__container">
-        {data.map((project, index) => {
-          return (
-            <>
-              <div key={index} className="portfolio__item">
-                <div className="portfolio__item-image">
-                  <img src={project.image} alt={project.alt} />
-                </div>
-                <div className="portfolio__content">
-                  <h3>{project.name}</h3>
-                  <span> {project.type} </span>
-                  <div className="portfolio__content-cta">
-                    <button
-                      onClick={() => {
-                        modalOpenHandler();
-                        setModalIndex(index);
-                      }}
-                      className="btn"
-                    >
-                      Learn more
-                    </button>
-                    <div className="portfolio__content-icons">
-                      {project.techs.map((tech, index) => {
-                        if (index <= 1) {
-                          return <div key={index}>{tech.icon}</div>;
-                        }
-                        return null;
-                      })}
+        <div className="container portfolio__container">
+          {data.map((project, index) => {
+            return (
+              <>
+                <div key={index} className="portfolio__item">
+                  <div className="portfolio__item-image">
+                    <img src={project.image} alt={project.alt} />
+                  </div>
+                  <div className="portfolio__content">
+                    <h3>{project.name}</h3>
+                    <span> {project.type} </span>
+                    <div className="portfolio__content-cta">
+                      <button
+                        onClick={() => {
+                          setOpenModal(true);
+                          setModalIndex(index);
+                        }}
+                        className="btn"
+                      >
+                        Learn more
+                      </button>
+                      <div className="portfolio__content-icons">
+                        {project.techs.map((tech, index) => {
+                          if (index <= 1) {
+                            return <div key={index}>{tech.icon}</div>;
+                          }
+                          return null;
+                        })}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <Modal
-                openModal={openModal}
-                modalIndex={modalIndex}
-                closeModal={() => modalCloseHandler()}
-              />
-            </>
-          );
-        })}
-      </div>
-      <div className="portfolio__other">
-        <small>Some projects are restricted by NDA.</small>
-      </div>
-    </section>
+              </>
+            );
+          })}
+        </div>
+        <div className="portfolio__other">
+          <small>Some projects are restricted by NDA.</small>
+        </div>
+      </section>
+
+      <ModalView
+        openModal={openModal}
+        modalIndex={modalIndex}
+        closeModal={() => setOpenModal(false)}
+      />
+    </>
   );
 };
 
 export default ProjectFirst;
 
-function Modal({ openModal, modalIndex, closeModal }) {
-  if (!openModal) {
-    return null;
-  }
-
+function ModalView({ openModal, modalIndex, closeModal }) {
   return (
-    <div onClick={closeModal} className="modal__overlay">
+    <>
       {data.map((project, index) => {
         if (index === modalIndex) {
           return (
-            <div
-              onClick={(e) => {
-                e.stopPropagation();
+            <Modal
+              open={openModal}
+              onClose={closeModal}
+              closeAfterTransition
+              BackdropComponent={Backdrop}
+              BackdropProps={{
+                timeout: 400,
               }}
-              className="container modal__container"
             >
-              <h3>{project.name}</h3>
-              <p>
-                <span> {project.type} </span>
-                <br /> {project.description}
-              </p>
-              <div className="modal__icons">
-                {project.techs.map((tech, index) => {
-                  return <div key={index}>{tech.icon}</div>;
-                })}
-              </div>
+              <Fade in={openModal}>
+                <div className="container modal__container">
+                  <h3>{project.name}</h3>
+                  <p>
+                    <span> {project.type} </span>
+                    <br /> {project.description}
+                  </p>
+                  <div className="modal__icons">
+                    {project.techs.map((tech, index) => {
+                      return <div key={index}>{tech.icon}</div>;
+                    })}
+                  </div>
 
-              <div className="modal__cta">
-                {project.links.map(({ type, link }, index) => {
-                  return (
-                    <a
-                      key={index}
-                      href={link}
-                      className="btn"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {type}
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
+                  <div className="modal__cta">
+                    {project.links.map(({ type, link }, index) => {
+                      return (
+                        <a
+                          key={index}
+                          href={link}
+                          className="btn"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {type}
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+              </Fade>
+            </Modal>
           );
         }
         return null;
       })}
-    </div>
+    </>
   );
 }
 
