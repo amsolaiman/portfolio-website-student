@@ -27,6 +27,10 @@
 }
 
 .experience__works {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+
   .work__container {
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -42,10 +46,11 @@
 
     .work__container-content {
       padding-top: 0.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.7rem;
 
       .work__item {
-        margin-bottom: 1.7rem;
-
         div {
           font-size: 0.8rem;
           color: var(--color-light);

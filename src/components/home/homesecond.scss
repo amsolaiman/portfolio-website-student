@@ -116,6 +116,7 @@
       border: 1px solid transparent;
       transition: var(--transition);
       user-select: none;
+      height: fit-content;
       box-shadow: 0 1px 8px rgba(0, 0, 0, 0.7) !important;
 
       &:hover {
@@ -147,6 +148,7 @@
             flex-wrap: wrap;
             column-gap: 12px;
             font-size: 2rem;
+            line-height: 0;
             width: 100%;
             justify-content: flex-end;
           }
