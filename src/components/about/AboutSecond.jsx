@@ -166,16 +166,16 @@ const works = [
     year: 2018,
     jobs: [
       {
+        name: "Graphic Designer/Editor",
+        type: "Freelance",
+        employer: "",
+        duration: "Jan 2018 - present",
+      },
+      {
         name: "BS Information Technology (Database Systems)",
         type: "Student",
         employer: "College of Information and Computing Sciences",
         duration: "Aug 2018 - Feb 2023",
-      },
-      {
-        name: "Graphic Designer/Editor",
-        type: "Freelance",
-        employer: "",
-        duration: "Nov 2018 - present",
       },
     ],
   },
