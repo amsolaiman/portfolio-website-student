@@ -1,4 +1,5 @@
 import React from "react";
+import Tippy from "@tippyjs/react";
 import "./aboutsecond.scss";
 
 import {
@@ -34,9 +35,11 @@ const AboutSecond = () => {
         <div className="experience__skills">
           {skills.map(({ name, icon }, index) => {
             return (
-              <div key={index} className="skills__icon">
-                {icon}
-              </div>
+              <Tippy content={name} placement="bottom">
+                <div key={index} className="skills__icon">
+                  {icon}
+                </div>
+              </Tippy>
             );
           })}
         </div>
