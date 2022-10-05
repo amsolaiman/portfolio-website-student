@@ -25,7 +25,7 @@ const HomeSecond = () => {
                   <div className="project__info">
                     <h3>{project.name}</h3>
                     <div className="project__cta">
-                      {project.links.map((link, index) => {
+                      {project.credentials.map((link, index) => {
                         if (index === 0) {
                           return (
                             <a
@@ -42,7 +42,7 @@ const HomeSecond = () => {
                         return null;
                       })}
                       <div className="item__icons">
-                        {project.techs.map((tech, index) => {
+                        {project.technologies.map((tech, index) => {
                           if (index <= 1) {
                             return <div key={index}>{tech.icon}</div>;
                           }
@@ -67,7 +67,7 @@ const HomeSecond = () => {
                   <div className="project__info">
                     <h3>mBALING App (Mobile)</h3>
                     <div className="project__cta">
-                      {project.links.map((link, index) => {
+                      {project.credentials.map((link, index) => {
                         if (index === 0) {
                           return (
                             <a
@@ -84,7 +84,7 @@ const HomeSecond = () => {
                         return null;
                       })}
                       <div className="item__icons">
-                        {project.techs.map((tech, index) => {
+                        {project.technologies.map((tech, index) => {
                           if (index <= 1) {
                             return <div key={index}>{tech.icon}</div>;
                           }
@@ -125,7 +125,7 @@ const HomeSecond = () => {
                     <div className="project__info">
                       <h3>{project.name}</h3>
                       <div className="project__cta">
-                        {project.links.map((link, index) => {
+                        {project.credentials.map((link, index) => {
                           if (index === 0) {
                             return (
                               <a
@@ -142,7 +142,7 @@ const HomeSecond = () => {
                           return null;
                         })}
                         <div className="item__icons">
-                          {project.techs.map((tech, index) => {
+                          {project.technologies.map((tech, index) => {
                             if (index <= 1) {
                               return <div key={index}>{tech.icon}</div>;
                             }

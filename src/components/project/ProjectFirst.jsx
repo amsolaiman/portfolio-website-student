@@ -36,7 +36,7 @@ const ProjectFirst = () => {
                       Learn more
                     </button>
                     <div className="portfolio__content-icons">
-                      {project.techs.map((tech, index) => {
+                      {project.technologies.map((tech, index) => {
                         if (index <= 1) {
                           return <div key={index}>{tech.icon}</div>;
                         }
@@ -81,14 +81,14 @@ function ModalView({ openModal, modalIndex, closeModal }) {
               }}
             >
               <Fade in={openModal}>
-                <div className="container modal__container">
+                <div className="container modal__container-project ">
                   <h3>{project.name}</h3>
                   <p>
                     <span> {project.type} </span>
                     <br /> {project.description}
                   </p>
                   <div className="modal__icons">
-                    {project.techs.map((tech, index) => {
+                    {project.technologies.map((tech, index) => {
                       return (
                         <Tippy
                           key={index}
@@ -102,7 +102,7 @@ function ModalView({ openModal, modalIndex, closeModal }) {
                   </div>
 
                   <div className="modal__cta">
-                    {project.links.map((link, index) => {
+                    {project.credentials.map((link, index) => {
                       return (
                         <a
                           key={index}

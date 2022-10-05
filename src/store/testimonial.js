@@ -1,5 +1,5 @@
-import React from 'react'
+import React from "react";
 
-const testimonial = []
+const testimonial = [];
 
-export default testimonial
+export default testimonial;
