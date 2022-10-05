@@ -51,8 +51,13 @@
         }
 
         h5 {
+          color: var(--color-white);
           font-size: 0.95rem;
         }
+      }
+
+      small {
+        color: var(--color-light);
       }
 
       .small__icons {
@@ -63,7 +68,6 @@
         small {
           padding-top: 0.7rem;
           font-size: 0.8rem;
-          color: var(--color-light);
         }
       }
     }
