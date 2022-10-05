@@ -16,41 +16,43 @@ const ProjectFirst = () => {
         <h2>Portfolio</h2>
 
         <div className="container portfolio__container">
-          {project.map((project, index) => {
-            return (
-              <div key={index} className="portfolio__item">
-                <div className="portfolio__item-image">
-                  <img src={project.image} alt={project.alt} />
-                </div>
-                <div className="portfolio__content">
-                  <h3>{project.name}</h3>
-                  <span> {project.type} </span>
-                  <div className="portfolio__content-cta">
-                    <button
-                      onClick={() => {
-                        setOpenModal(true);
-                        setModalIndex(index);
-                      }}
-                      className="btn"
-                    >
-                      Learn more
-                    </button>
-                    <div className="portfolio__content-icons">
-                      {project.technologies.map((tech, index) => {
-                        if (index <= 1) {
-                          return <div key={index}>{tech.icon}</div>;
-                        }
-                        return null;
-                      })}
+          <div className="portfolio__pagination">
+            {project.map((project, index) => {
+              return (
+                <div key={index} className="portfolio__item">
+                  <div className="portfolio__item-image">
+                    <img src={project.image} alt={project.alt} />
+                  </div>
+                  <div className="portfolio__content">
+                    <h3>{project.name}</h3>
+                    <span> {project.type} </span>
+                    <div className="portfolio__content-cta">
+                      <button
+                        onClick={() => {
+                          setOpenModal(true);
+                          setModalIndex(index);
+                        }}
+                        className="btn"
+                      >
+                        Learn more
+                      </button>
+                      <div className="portfolio__content-icons">
+                        {project.technologies.map((tech, index) => {
+                          if (index <= 1) {
+                            return <div key={index}>{tech.icon}</div>;
+                          }
+                          return null;
+                        })}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="portfolio__other">
-          <small>Some projects are restricted by NDA.</small>
+              );
+            })}
+          </div>
+          <div className="portfolio__other">
+            <small>Some projects are restricted by NDA.</small>
+          </div>
         </div>
       </section>
 

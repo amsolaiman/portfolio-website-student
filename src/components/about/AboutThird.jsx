@@ -19,54 +19,53 @@ const AboutThird = () => {
         <h5>What I achieved</h5>
         <h2>Certifications</h2>
 
-        <div className="container certificate__container">
-          <Swiper
-            breakpoints={{
-              240: {
-                spaceBetween: 10,
-                slidesPerView: 1,
-              },
-              600: {
-                spaceBetween: 30,
-                slidesPerView: 2,
-              },
-            }}
-            loop={true}
-            grabCursor={true}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              dynamicBullets: true,
-              clickable: true,
-            }}
-            modules={[Autoplay, Pagination]}
-          >
-            {certification.map((cert, index) => {
-              return (
-                <SwiperSlide key={index} className="certificate__item">
-                  {cert.images.map((image, index) => {
-                    if (index === 0) {
-                      return <img src={image.image} alt={image.alt} />;
-                    }
-                    return null;
-                  })}
-                  <div
-                    onClick={() => {
-                      setOpenModal(true);
-                      setModalIndex(index);
-                    }}
-                    className="certificate__title"
-                  >
-                    <h4>{cert.name}</h4>
-                    <small>{cert.type}</small>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </div>
+        <Swiper
+          breakpoints={{
+            240: {
+              spaceBetween: 10,
+              slidesPerView: 1,
+            },
+            600: {
+              spaceBetween: 30,
+              slidesPerView: 2,
+            },
+          }}
+          loop={true}
+          grabCursor={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
+          modules={[Autoplay, Pagination]}
+          className="container certificate__container"
+        >
+          {certification.map((cert, index) => {
+            return (
+              <SwiperSlide key={index} className="certificate__item">
+                {cert.images.map((image, index) => {
+                  if (index === 0) {
+                    return <img src={image.image} alt={image.alt} />;
+                  }
+                  return null;
+                })}
+                <div
+                  onClick={() => {
+                    setOpenModal(true);
+                    setModalIndex(index);
+                  }}
+                  className="certificate__title"
+                >
+                  <h4>{cert.name}</h4>
+                  <small>{cert.type}</small>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </section>
 
       <ModalView
@@ -104,7 +103,7 @@ function ModalView({ openModal, modalIndex, closeModal }) {
                     spaceBetween={20}
                     grabCursor={true}
                     autoplay={{
-                      delay: 5000,
+                      delay: 3000,
                       disableOnInteraction: false,
                     }}
                     modules={[Autoplay, EffectCards]}

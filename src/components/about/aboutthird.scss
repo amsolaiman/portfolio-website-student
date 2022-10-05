@@ -1,6 +1,7 @@
 .certificate__container {
   display: flex;
   align-items: center;
+  margin-bottom: 12rem;
 
   .certificate__item {
     position: relative;
@@ -53,6 +54,7 @@
 @media screen and (max-width: 1024px) {
   .certificate__container {
     width: var(--container-width-md);
+    margin-bottom: 0;
   }
 }
 

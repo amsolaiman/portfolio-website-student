@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 30% 58%;
   gap: 12%;
+  margin-bottom: 12rem;
 }
 
 .contact__options {
@@ -58,7 +59,7 @@ form {
   .contact__container {
     grid-template-columns: 1fr;
     gap: 2rem;
-    margin-bottom: 6rem;
+    margin-bottom: 0;
   }
 
   form {
