@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper";
+import { Autoplay, EffectCards, Pagination } from "swiper";
 import { Backdrop, Fade, Modal } from "@mui/material";
 import "./aboutthird.scss";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-cards";
 
 import certification from "../../store/certification";
 
@@ -97,6 +98,7 @@ function ModalView({ openModal, modalIndex, closeModal }) {
               <Fade in={openModal}>
                 <div className="container modal__container-cert">
                   <Swiper
+                    effect={"cards"}
                     slidesPerView={"auto"}
                     centeredSlides={true}
                     spaceBetween={20}
@@ -105,15 +107,11 @@ function ModalView({ openModal, modalIndex, closeModal }) {
                       delay: 5000,
                       disableOnInteraction: false,
                     }}
-                    pagination={{
-                      dynamicBullets: true,
-                      clickable: true,
-                    }}
-                    modules={[Autoplay, Pagination]}
+                    modules={[Autoplay, EffectCards]}
                   >
                     {cert.images.map((image, index) => {
                       return (
-                        <SwiperSlide key={index} className="modal__images">
+                        <SwiperSlide key={index}>
                           <img src={image.image} alt={image.alt} />
                         </SwiperSlide>
                       );
