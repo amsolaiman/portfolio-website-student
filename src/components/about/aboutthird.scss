@@ -64,18 +64,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-//   .swiper-wrapper {
-//     padding-bottom: 1.7rem;
-//   }
-
-//   .swiper-pagination-bullet {
-//     background: var(--color-white);
-//   }
-
-//   .swiper-pagination-bullet-active {
-//     background: var(--color-primary);
-//   }
 }
 
 @media screen and (max-width: 1024px) {
@@ -86,6 +74,6 @@
 
 @media screen and (max-width: 600px) {
   .modal__container-cert {
-    width: var(--container-width-md);
+    width: var(--container-width-sm);
   }
 }
