@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Tippy from "@tippyjs/react";
 import { Backdrop, Fade, Modal } from "@mui/material";
 import "./projectfirst.scss";
 
@@ -88,7 +89,15 @@ function ModalView({ openModal, modalIndex, closeModal }) {
                   </p>
                   <div className="modal__icons">
                     {project.techs.map((tech, index) => {
-                      return <div key={index}>{tech.icon}</div>;
+                      return (
+                        <Tippy
+                          key={index}
+                          content={tech.name}
+                          placement="bottom"
+                        >
+                          {tech.icon}
+                        </Tippy>
+                      );
                     })}
                   </div>
 

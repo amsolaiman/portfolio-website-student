@@ -146,3 +146,30 @@ img {
     }
   }
 }
+
+/* tippy.js tooltip styles */
+
+.tippy-box[data-animation="fade"][data-state="hidden"] {
+  opacity: 0;
+}
+[data-tippy-root] {
+  max-width: calc(100vw - 10px);
+}
+
+.tippy-box {
+  position: relative;
+  background-color: var(--color-light);
+  color: var(--color-bg);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: normal;
+  outline: 0;
+  transition-property: transform, visibility, opacity;
+}
+
+.tippy-content {
+  position: relative;
+  padding: 0.25rem 0.7rem;
+  z-index: 1;
+}

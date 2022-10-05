@@ -21,18 +21,23 @@ const project = [
     alt: "mbaling-desktop",
     techs: [
       {
+        name: "Quasar Framework",
         icon: <SiQuasar />,
       },
       {
+        name: "Nest JS",
         icon: <SiNestjs />,
       },
       {
+        name: "Vue",
         icon: <SiVuedotjs />,
       },
       {
+        name: "TypeScript",
         icon: <SiTypescript />,
       },
       {
+        name: "MySQL",
         icon: <SiMysql />,
       },
     ],
@@ -55,18 +60,23 @@ const project = [
     alt: "mbaling-mobile",
     techs: [
       {
+        name: "Quasar Framework",
         icon: <SiQuasar />,
       },
       {
+        name: "Nest JS",
         icon: <SiNestjs />,
       },
       {
+        name: "Vue",
         icon: <SiVuedotjs />,
       },
       {
+        name: "TypeScript",
         icon: <SiTypescript />,
       },
       {
+        name: "MySQL",
         icon: <SiMysql />,
       },
     ],
@@ -89,6 +99,7 @@ const project = [
     alt: "spfc-logo",
     techs: [
       {
+        name: "Adove Illustrator",
         icon: <SiAdobeillustrator />,
       },
     ],
