@@ -3,6 +3,38 @@
   align-items: center;
   margin-bottom: 12rem;
 
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   height: 100%;
+  //   width: 100px;
+  //   background: linear-gradient(
+  //     to left,
+  //     rgba(17, 17, 17, 0) 0%,
+  //     rgba(17, 17, 17, 0.3) 50%,
+  //     #111 100%
+  //   );
+  //   z-index: 2;
+  //   pointer-events: none;
+  // }
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   right: 0;
+  //   height: 100%;
+  //   width: 100px;
+  //   background: linear-gradient(
+  //     to right,
+  //     rgba(17, 17, 17, 0) 0%,
+  //     rgba(17, 17, 17, 0.3) 50%,
+  //     #111 100%
+  //   );
+  //   z-index: 2;
+  //   pointer-events: none;
+  // }
+
   .certificate__item {
     position: relative;
     width: 100%;

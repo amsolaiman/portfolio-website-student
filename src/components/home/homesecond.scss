@@ -22,11 +22,13 @@
 
     & > * {
       break-inside: avoid;
-      margin-bottom: 8rem;
+      // margin-bottom: 8rem;
     }
   }
 
   .project__title {
+    padding-bottom: 7rem;
+
     h2,
     h5 {
       text-align: end;
@@ -35,7 +37,6 @@
 
     h2 {
       color: var(--color-primary);
-      padding-bottom: 5rem;
     }
   }
 
@@ -84,6 +85,7 @@
     display: grid;
     gap: 1rem;
     color: var(--color-light);
+    padding-top: 5rem;
   }
 
   .item_left:hover {

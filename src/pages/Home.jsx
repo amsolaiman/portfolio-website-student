@@ -3,6 +3,7 @@ import React from "react";
 import HomeHeader from "../components/home/HomeHeader";
 import HomeFirst from "../components/home/HomeFirst";
 import HomeSecond from "../components/home/HomeSecond";
+import ServiceThird from "../components/service/ServiceThird";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <HomeHeader />
       <HomeFirst />
       <HomeSecond />
+      <ServiceThird />
     </>
   );
 };
