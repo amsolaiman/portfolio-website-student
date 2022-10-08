@@ -45,6 +45,11 @@ const projects = (data, setOpenModal, setModalIndex) => {
 };
 
 const ProjectFirst = () => {
+  /* item modal view */
+  const [openModal, setOpenModal] = useState(false);
+  const [modalIndex, setModalIndex] = useState(0);
+
+  /* page pagination */
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(6);
   const pageNumberLimit = 5;
@@ -53,9 +58,6 @@ const ProjectFirst = () => {
   const indexLastItem = currentPage * itemsPerPage;
   const indexFirstItem = indexLastItem - itemsPerPage;
   const currentItems = project.slice(indexFirstItem, indexLastItem);
-
-  const [openModal, setOpenModal] = useState(false);
-  const [modalIndex, setModalIndex] = useState(0);
 
   const pages = [];
   for (let i = 1; i <= Math.ceil(project.length / itemsPerPage); i++) {
@@ -113,6 +115,7 @@ const ProjectFirst = () => {
     }
   });
 
+  /* media query responsiveness */
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
