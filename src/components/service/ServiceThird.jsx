@@ -30,7 +30,6 @@ const ServiceThird = () => {
           slidesPerView={"auto"}
           loop={true}
           centeredSlides={true}
-          // spaceBetween={100}
           speed={10000}
           autoplay={{
             delay: 0,

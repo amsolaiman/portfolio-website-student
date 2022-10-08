@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import Tippy from "@tippyjs/react";
 import { Backdrop, Fade, Modal } from "@mui/material";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Grid, Pagination } from "swiper";
 import "./projectfirst.scss";
+// import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/pagination";
 
 import project from "../../store/project";
 
@@ -19,7 +24,7 @@ const ProjectFirst = () => {
           <div className="portfolio__pagination">
             {project.map((project, index) => {
               return (
-                <div key={index} className="portfolio__item">
+                <SwiperSlide key={index} className="portfolio__item">
                   <div className="portfolio__item-image">
                     <img src={project.image} alt={project.alt} />
                   </div>
@@ -46,7 +51,7 @@ const ProjectFirst = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </SwiperSlide>
               );
             })}
           </div>
