@@ -2,7 +2,7 @@
   margin-bottom: 12rem;
 }
 
-.portfolio__pagination {
+.portfolio__item-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
@@ -67,6 +67,60 @@
   }
 }
 
+.portfolio__pagination {
+  margin-top: 1.2rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    height: 1.7rem;
+    width: 1.7rem;
+    color: var(--color-light);
+    border: 1px transparent;
+    border-radius: 50%;
+    justify-content: center;
+    background: var(--color-bg-variant);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-white);
+      background: transparent;
+      border: 1px solid var(--color-primary-variant);
+    }
+
+    &.active {
+      color: var(--color-white);
+      background: var(--color-primary);
+    }
+
+    button {
+      height: 1.7rem;
+      width: 1.7rem;
+      font-family: "Poppins", sans-serif;
+      color: var(--color-light);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    &.portfolio__pagination-more {
+      color: var(--color-light);
+      background: transparent;
+      cursor: default;
+
+      &:hover {
+        color: var(--color-light);
+        background: transparent;
+        border: 1px transparent;
+      }
+    }
+  }
+}
+
 .portfolio__other {
   margin-top: 2rem;
   text-align: center;
@@ -79,7 +133,7 @@
     margin-bottom: 0;
   }
 
-  .portfolio__pagination {
+  .portfolio__item-container {
     grid-template-columns: repeat(2, 1fr);
 
     .portfolio__item {
@@ -100,7 +154,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .portfolio__pagination {
+  .portfolio__item-container {
     grid-template-columns: repeat(1, 1fr);
   }
 }
