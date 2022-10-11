@@ -14,6 +14,7 @@ import IMG3 from "../assets/project3.jpg";
 
 const project = [
   {
+    id: 1,
     name: "mBALING Admin System (Desktop)",
     type: "Capstone Project",
     description: `A student housing management system for on-campus housing firms in the Mindanao State University campus. This is the desktop system of the project that administers the user records and the creation and deletion of user accounts.`,
@@ -53,6 +54,7 @@ const project = [
     ],
   },
   {
+    id: 2,
     name: "mBALING App (Mobile)",
     type: "Capstone Project",
     description: `A student housing management system for on-campus housing firms in the Mindanao State University campus. This is the mobile system of the project that manages the activities and displays the content posted by the users.`,
@@ -92,6 +94,7 @@ const project = [
     ],
   },
   {
+    id: 3,
     name: "MSU-SPFC Logo",
     type: "Logo Design",
     description: `MSU Student Peer Facilitators' Circle is a student support program established by the Mindanao State University-Division of Student Affairs. This logo was designed using Adobe Illustrator and consists of outlined and non-outlined variations.`,

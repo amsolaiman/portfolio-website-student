@@ -5,7 +5,7 @@ import "./projectfirst.scss";
 
 import project from "../../store/project";
 
-const projects = (data, setOpenModal, setModalIndex) => {
+const projects = (data, setOpenModal, filterModal) => {
   return (
     <>
       {data.map((project, index) => {
@@ -21,7 +21,7 @@ const projects = (data, setOpenModal, setModalIndex) => {
                 <button
                   onClick={() => {
                     setOpenModal(true);
-                    setModalIndex(index);
+                    filterModal(project.id);
                   }}
                   className="btn"
                 >
@@ -47,7 +47,15 @@ const projects = (data, setOpenModal, setModalIndex) => {
 const ProjectFirst = () => {
   /* item modal view */
   const [openModal, setOpenModal] = useState(false);
-  const [modalIndex, setModalIndex] = useState(0);
+  const [modalFiltered, setModalFiltered] = useState([]);
+
+  const filterModal = (itemID) => {
+    setModalFiltered(
+      project.filter((value) => {
+        return value.id === itemID;
+      })
+    );
+  };
 
   /* page pagination */
   const [currentPage, setCurrentPage] = useState(1);
@@ -153,7 +161,7 @@ const ProjectFirst = () => {
 
         <div className="container portfolio__container">
           <div className="portfolio__item-container">
-            {projects(currentItems, setOpenModal, setModalIndex)}
+            {projects(currentItems, setOpenModal, filterModal)}
           </div>
           <ul className="portfolio__pagination">
             <li>
@@ -186,7 +194,7 @@ const ProjectFirst = () => {
 
       <ModalView
         openModal={openModal}
-        modalIndex={modalIndex}
+        data={modalFiltered}
         closeModal={() => setOpenModal(false)}
       />
     </>
@@ -195,63 +203,57 @@ const ProjectFirst = () => {
 
 export default ProjectFirst;
 
-function ModalView({ openModal, modalIndex, closeModal }) {
+function ModalView({ openModal, data, closeModal }) {
   return (
     <>
-      {project.map((project, index) => {
-        if (index === modalIndex) {
-          return (
-            <Modal
-              open={openModal}
-              onClose={closeModal}
-              closeAfterTransition
-              BackdropComponent={Backdrop}
-              BackdropProps={{
-                timeout: 400,
-              }}
-            >
-              <Fade in={openModal}>
-                <div className="container modal__container-project ">
-                  <h3>{project.name}</h3>
-                  <p>
-                    <span> {project.type} </span>
-                    <br /> {project.description}
-                  </p>
-                  <div className="modal__icons">
-                    {project.technologies.map((tech, index) => {
-                      return (
-                        <Tippy
-                          key={index}
-                          content={tech.name}
-                          placement="bottom"
-                        >
-                          {tech.icon}
-                        </Tippy>
-                      );
-                    })}
-                  </div>
-
-                  <div className="modal__cta">
-                    {project.credentials.map((link, index) => {
-                      return (
-                        <a
-                          key={index}
-                          href={link.link}
-                          className="btn"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          {link.type}
-                        </a>
-                      );
-                    })}
-                  </div>
+      {data.map((project, index) => {
+        return (
+          <Modal
+            key={index}
+            open={openModal}
+            onClose={closeModal}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 400,
+            }}
+          >
+            <Fade in={openModal}>
+              <div className="container modal__container-project ">
+                <h3>{project.name}</h3>
+                <p>
+                  <span> {project.type} </span>
+                  <br /> {project.description}
+                </p>
+                <div className="modal__icons">
+                  {project.technologies.map((tech, index) => {
+                    return (
+                      <Tippy content={tech.name} placement="bottom">
+                        <small key={index}>{tech.icon}</small>
+                      </Tippy>
+                    );
+                  })}
                 </div>
-              </Fade>
-            </Modal>
-          );
-        }
-        return null;
+
+                <div className="modal__cta">
+                  {project.credentials.map((link, index) => {
+                    return (
+                      <a
+                        key={index}
+                        href={link.link}
+                        className="btn"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {link.type}
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            </Fade>
+          </Modal>
+        );
       })}
     </>
   );

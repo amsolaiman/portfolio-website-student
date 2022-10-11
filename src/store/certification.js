@@ -4,6 +4,7 @@ import IMG2 from "../assets/certificate2.jpg";
 
 const certification = [
   {
+    id: 1,
     name: "C# Programming for Unity Game Development",
     type: "Course Certificate",
     images: [
@@ -18,6 +19,7 @@ const certification = [
     ],
   },
   {
+    id: 2,
     name: "Cybersecurity Awareness and Innovation",
     type: "Course Certificate",
     images: [

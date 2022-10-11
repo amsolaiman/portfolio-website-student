@@ -8,11 +8,14 @@ import {
   SiAutodesk,
   SiCsharp,
   SiCss3,
+  SiFramer,
   SiGit,
   SiHtml5,
   SiJava,
   SiJavascript,
   SiMaterialui,
+  SiMysql,
+  SiNestjs,
   SiNodedotjs,
   SiQuasar,
   SiReact,
@@ -65,6 +68,10 @@ const interest = [
     icon: <SiJavascript />,
   },
   {
+    name: "Framer Motion",
+    icon: <SiFramer />,
+  },
+  {
     name: "Java",
     icon: <SiJava />,
   },
@@ -81,6 +88,10 @@ const interest = [
     icon: <SiAdobeillustrator />,
   },
   {
+    name: "MySQL",
+    icon: <SiMysql />,
+  },
+  {
     name: "CSS3",
     icon: <SiCss3 />,
   },
@@ -95,6 +106,10 @@ const interest = [
   {
     name: "Git",
     icon: <SiGit />,
+  },
+  {
+    name: "Nest JS",
+    icon: <SiNestjs />,
   },
   {
     name: "Sass",

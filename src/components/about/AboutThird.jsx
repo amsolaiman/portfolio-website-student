@@ -11,7 +11,15 @@ import certification from "../../store/certification";
 
 const AboutThird = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [modalIndex, setModalIndex] = useState(0);
+  const [modalFiltered, setModalFiltered] = useState([]);
+
+  const filterModal = (itemID) => {
+    setModalFiltered(
+      certification.filter((value) => {
+        return value.id === itemID;
+      })
+    );
+  };
 
   return (
     <>
@@ -55,7 +63,7 @@ const AboutThird = () => {
                 <div
                   onClick={() => {
                     setOpenModal(true);
-                    setModalIndex(index);
+                    filterModal(cert.id);
                   }}
                   className="certificate__title"
                 >
@@ -70,7 +78,7 @@ const AboutThird = () => {
 
       <ModalView
         openModal={openModal}
-        modalIndex={modalIndex}
+        data={modalFiltered}
         closeModal={() => setOpenModal(false)}
       />
     </>
@@ -79,49 +87,47 @@ const AboutThird = () => {
 
 export default AboutThird;
 
-function ModalView({ openModal, modalIndex, closeModal }) {
+function ModalView({ openModal, data, closeModal }) {
   return (
     <>
-      {certification.map((cert, index) => {
-        if (index === modalIndex) {
-          return (
-            <Modal
-              open={openModal}
-              onClose={closeModal}
-              closeAfterTransition
-              BackdropComponent={Backdrop}
-              BackdropProps={{
-                timeout: 400,
-              }}
-            >
-              <Fade in={openModal}>
-                <div className="container modal__container-cert">
-                  <Swiper
-                    effect={"cards"}
-                    slidesPerView={"auto"}
-                    centeredSlides={true}
-                    spaceBetween={20}
-                    grabCursor={true}
-                    autoplay={{
-                      delay: 3000,
-                      disableOnInteraction: false,
-                    }}
-                    modules={[Autoplay, EffectCards]}
-                  >
-                    {cert.images.map((image, index) => {
-                      return (
-                        <SwiperSlide key={index}>
-                          <img src={image.image} alt={image.alt} />
-                        </SwiperSlide>
-                      );
-                    })}
-                  </Swiper>
-                </div>
-              </Fade>
-            </Modal>
-          );
-        }
-        return null;
+      {data.map((cert, index) => {
+        return (
+          <Modal
+            key={index}
+            open={openModal}
+            onClose={closeModal}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 400,
+            }}
+          >
+            <Fade in={openModal}>
+              <div className="container modal__container-cert">
+                <Swiper
+                  effect={"cards"}
+                  slidesPerView={"auto"}
+                  centeredSlides={true}
+                  spaceBetween={20}
+                  grabCursor={true}
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }}
+                  modules={[Autoplay, EffectCards]}
+                >
+                  {cert.images.map((image, index) => {
+                    return (
+                      <SwiperSlide key={index}>
+                        <img src={image.image} alt={image.alt} />
+                      </SwiperSlide>
+                    );
+                  })}
+                </Swiper>
+              </div>
+            </Fade>
+          </Modal>
+        );
       })}
     </>
   );

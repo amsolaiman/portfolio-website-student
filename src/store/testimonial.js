@@ -1,11 +1,13 @@
 const testimonial = [
   {
+    id: 1,
     name: "Faridah D. Alango",
     job: "Guidance Services Specialist",
     organization: "Adviser, MSU-SPFC",
     testimonial: `In my work attending to different areas in the academe its a big help having a different kind of website keeping files that is accessible & tailored fit 2 d needs. thanks i found this website by Abdul moiz.`,
   },
   {
+    id: 2,
     name: "Sahara A. Laguindab",
     job: "Layout Artist",
     organization: "Owner, An Art from the Desert",

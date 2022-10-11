@@ -11,8 +11,7 @@ const experience = [
       {
         name: "BS Information Technology (Database Systems)",
         type: "Student",
-        employer:
-          "College of Information and Computing Sciences, Mindanao State University",
+        employer: "Mindanao State University",
         duration: "Aug 2018 - Feb 2023",
       },
     ],
