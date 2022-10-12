@@ -5,10 +5,14 @@ import { TbCup } from "react-icons/tb";
 import { RiNewspaperLine } from "react-icons/ri";
 import { CgWebsite } from "react-icons/cg";
 import { BiHomeHeart } from "react-icons/bi";
+import { Divider } from "@mui/material";
 
 const ServiceSecond = () => {
   return (
     <section>
+      <h5>How I can help</h5>
+      <h2>Products</h2>
+
       <div className="container offer__container">
         <div className="offer__grid">
           <div className="grid__head">
@@ -30,26 +34,7 @@ const ServiceSecond = () => {
           </div>
         </div>
 
-        <div className="offer__grid">
-          <div className="grid__head">
-            <span className="grid__head-icon">
-              <CgWebsite />
-            </span>
-            <h2>Build your personal website</h2>
-          </div>
-          <div className="grid__content">
-            I can help you with building your own website or upgrading an
-            existing one, and help you deploy and manage it online.
-          </div>
-          <div className="grid__caption">
-            Setting up your own website allows you to showcase your work and
-            provide proof of your abilities. This is a must if you are in one of
-            the creative fields such as writing, designing, art, music, etc.
-            While you can list out your skills on your resume, having a
-            portfolio lets people see exactly what you have done.
-          </div>
-        </div>
-
+        <Divider className="grid__divider" />
         <div className="offer__grid">
           <div className="grid__head">
             <span className="grid__head-icon">
@@ -73,13 +58,34 @@ const ServiceSecond = () => {
         <div className="offer__grid">
           <div className="grid__head">
             <span className="grid__head-icon">
+              <CgWebsite />
+            </span>
+            <h2>Build your personal website</h2>
+          </div>
+          <div className="grid__content">
+            I can help you with building your own website or upgrading an
+            existing one, and deploy and manage it online.
+          </div>
+          <div className="grid__caption">
+            Setting up your own website allows you to showcase your work and
+            provide proof of your abilities. This is a must if you are in one of
+            the creative fields such as writing, designing, art, music, etc.
+            While you can list out your skills on your resume, having a
+            portfolio lets people see exactly what you have done.
+          </div>
+        </div>
+
+        <Divider className="grid__divider" />
+        <div className="offer__grid">
+          <div className="grid__head">
+            <span className="grid__head-icon">
               <BiHomeHeart />
             </span>
             <h2>Make your dreamhouse 3D</h2>
           </div>
           <div className="grid__content">
             I can help you transform your dream house blueprint into a 3D model
-            that will help you visualize its finished design beforehand.
+            that will help you visualize its finished design.
           </div>
           <div className="grid__caption">
             Using 3D Modelling for architectural construction and design allows
