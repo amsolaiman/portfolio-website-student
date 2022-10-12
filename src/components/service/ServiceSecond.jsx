@@ -19,7 +19,7 @@ const ServiceSecond = () => {
             <span className="grid__head-icon">
               <TbCup />
             </span>
-            <h2>Design your product labels</h2>
+            <h3>Design your product labels</h3>
           </div>
           <div className="grid__content">
             I can help you design graphic assets to make your products stand
@@ -40,7 +40,7 @@ const ServiceSecond = () => {
             <span className="grid__head-icon">
               <RiNewspaperLine />
             </span>
-            <h2>Design your marketing materials</h2>
+            <h3>Design your marketing materials</h3>
           </div>
           <div className="grid__content">
             I can help you create graphic materials for your ads, banners,
@@ -60,7 +60,7 @@ const ServiceSecond = () => {
             <span className="grid__head-icon">
               <CgWebsite />
             </span>
-            <h2>Build your personal website</h2>
+            <h3>Build your personal website</h3>
           </div>
           <div className="grid__content">
             I can help you with building your own website or upgrading an
@@ -81,7 +81,7 @@ const ServiceSecond = () => {
             <span className="grid__head-icon">
               <BiHomeHeart />
             </span>
-            <h2>Make your dreamhouse 3D</h2>
+            <h3>Make your dreamhouse 3D</h3>
           </div>
           <div className="grid__content">
             I can help you transform your dream house blueprint into a 3D model

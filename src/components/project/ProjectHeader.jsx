@@ -27,7 +27,7 @@ const ProjectHeader = () => {
             options={{
               autoStart: true,
               loop: true,
-              delay: 40,
+              delay: 70,
               strings: [
                 "Capstone Projects",
                 "Design Templates",

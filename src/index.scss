@@ -121,6 +121,10 @@ img {
   object-fit: cover;
 }
 
+.footer__atloading {
+  display: none;
+}
+
 /* media queries (medium) */
 
 @media screen and (max-width: 1024px) {

@@ -27,7 +27,7 @@ const HomeHeader = () => {
             options={{
               autoStart: true,
               loop: true,
-              delay: 40,
+              delay: 70,
               strings: [
                 "Frontend Developer",
                 "UI/UX Designer",

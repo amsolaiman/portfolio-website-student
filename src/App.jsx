@@ -1,6 +1,6 @@
 import React, { useState, useRef, useMemo, useEffect } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-// import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import "./index.scss";
 
 import Home from "./pages/Home";
@@ -10,11 +10,18 @@ import Service from "./pages/Service";
 import Contact from "./pages/Contact";
 import Nav from "./components/nav/Nav";
 import Footer from "./components/footer/Footer";
-// import Loader from "./components/loader/Loader";
+import Loader from "./components/loader/Loader";
 
 const App = () => {
   /* loading screen */
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
 
   /* navbar hide at footer */
   const targetRef = useRef(null);
@@ -34,11 +41,6 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    // setLoading(true);
-    // setTimeout(() => {
-    //   setLoading(false);
-    // }, 3000);
-
     const observer = new IntersectionObserver(atFooterFunction, options);
     const currentTarget = targetRef.current;
     if (currentTarget) {
@@ -54,29 +56,39 @@ const App = () => {
 
   return (
     <>
-      {/* {loading ? (
-        <Loader />
+      {loading ? (
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 1 } }}
+            exit={{ opacity: 0 }}
+          >
+            <Loader />
+          </motion.div>
+        </AnimatePresence>
       ) : (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 2 } }}
-        > */}
-      <Nav className={atFooter ? "nav__atfooter" : ""} />
-      <ScrollToTop>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </ScrollToTop>
-      <div ref={targetRef}>
+        <>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 1.5 } }}
+          >
+            <Nav className={atFooter ? "nav__atfooter" : null} />
+            <ScrollToTop>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/project" element={<Project />} />
+                <Route path="/service" element={<Service />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </ScrollToTop>
+          </motion.div>
+        </>
+      )}
+      <div ref={targetRef} className={loading ? "footer__atloading" : null}>
         <Footer />
       </div>
-      {/* </motion.div>
-      )} */}
     </>
   );
 };

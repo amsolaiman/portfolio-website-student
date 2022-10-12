@@ -27,7 +27,7 @@ const ContactHeader = () => {
             options={{
               autoStart: true,
               loop: true,
-              delay: 40,
+              delay: 70,
               strings: [
                 "I would love to hear from you.",
                 "Let me help you achieve your goals.",

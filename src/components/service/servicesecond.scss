@@ -28,14 +28,14 @@
   .grid__head {
     display: flex;
     gap: 0.7rem;
-    align-items: flex-end;
+    align-items: center;
 
     .grid__head-icon {
       font-size: 2rem;
       color: var(--color-primary);
     }
 
-    h2 {
+    h3 {
       text-align: start;
       color: var(--color-primary);
       margin-bottom: 0.7rem;
@@ -60,14 +60,13 @@
     padding: 1rem 0 1rem 1.5rem;
 
     .grid__head {
-      align-items: center;
       gap: 1rem;
 
       .grid__head-icon {
         font-size: 3rem;
       }
 
-      h2 {
+      h3 {
         line-height: 1.7rem;
       }
     }
@@ -110,10 +109,14 @@
         line-height: 3rem;
       }
 
-      h2 {
+      h3 {
         text-align: center;
         margin-bottom: 1rem;
       }
+    }
+
+    .grid__content {
+      font-size: 0.9rem;
     }
   }
 }

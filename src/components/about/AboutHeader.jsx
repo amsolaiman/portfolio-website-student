@@ -27,7 +27,7 @@ const AboutHeader = () => {
             options={{
               autoStart: true,
               loop: true,
-              delay: 40,
+              delay: 70,
               strings: [
                 "Nyke Moiz hen Solaiman Lentrot.",
                 "I prefer minimalistic designs.",

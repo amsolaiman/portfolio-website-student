@@ -27,7 +27,7 @@ const ServiceHeader = () => {
             options={{
               autoStart: true,
               loop: true,
-              delay: 40,
+              delay: 70,
               strings: [
                 "Freelancing",
                 "Product Prototyping",
