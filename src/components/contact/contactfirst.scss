@@ -30,7 +30,7 @@
       margin-bottom: 0.5rem;
     }
 
-    .contact__option a {
+    a {
       margin-top: 0.7rem;
       display: inline-block;
       font-size: 0.8rem;
@@ -60,6 +60,14 @@ form {
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 0;
+  }
+
+  .contact__options {
+    .contact__option {
+      a {
+        font-size: 1rem;
+      }
+    }
   }
 
   form {

@@ -18,6 +18,12 @@
   border-radius: 2rem;
   padding: 1.7rem 0 1.7rem 2rem;
   background: linear-gradient(to right, var(--color-bg-variant), transparent);
+  transition: var(--transition);
+  cursor: default;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   .grid__head {
     display: flex;
@@ -91,6 +97,10 @@
       transparent 90%
     );
     text-align: center;
+
+    &:hover {
+      transform: scale(1) translateY(-12px);
+    }
 
     .grid__head {
       flex-direction: column;
