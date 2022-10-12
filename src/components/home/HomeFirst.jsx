@@ -73,11 +73,12 @@ const HomeFirst = () => {
 
             <FaQuoteRight className="qoute" />
             <p>
-              Hello! I'm Abdul Moiz Solaiman, a BS Information Technology
-              student at Mindanao State University, Marawi City. I'm an aspiring
-              web and software developer. I have been freelancing since senior
-              high school as a graphic designer and illustrator, and have helped
-              a few organizations with their needs for digital design support.
+              Art has been a great influence on my life. I'm an aspiring web and
+              software designer and developer. I am flexible in using and
+              learning different development technologies. I have been
+              freelancing since senior high school as a graphic designer and
+              illustrator, and have helped a few organizations with their needs
+              for digital design support.
             </p>
             <div className="intro__content-cta">
               <Link to="/about" className="btn btn-primary">
@@ -100,11 +101,12 @@ const HomeFirst = () => {
           <div className="intro__content">
             <FaQuoteRight className="qoute" />
             <p>
-              Hello! I'm Abdul Moiz Solaiman, a BS Information Technology
-              student at Mindanao State University, Marawi City. I'm an aspiring
-              web and software developer. I have been freelancing since senior
-              high school as a graphic designer and illustrator, and have helped
-              a few organizations with their needs for digital design support.
+              Art has been a great influence on my life. I'm an aspiring web and
+              software designer and developer. I am flexible in using and
+              learning different development technologies. I have been
+              freelancing since senior high school as a graphic designer and
+              illustrator, and have helped a few organizations with their needs
+              for digital design support.
             </p>
             <div className="intro__content-cta">
               <Link to="/about" className="btn btn-primary">
