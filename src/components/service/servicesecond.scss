@@ -7,13 +7,14 @@
 
 .offer__grid {
   height: auto;
+  color: var(--color-light);
 
-  .offer__grid-head {
+  .grid__head {
     display: flex;
     gap: 0.7rem;
     align-items: flex-end;
 
-    .head__icon {
+    .grid__head-icon {
       font-size: 2rem;
       color: var(--color-primary);
     }
@@ -25,9 +26,9 @@
     }
   }
 
-  p {
-    white-space: normal;
-    color: var(--color-light);
+  .grid__content {
+    color: var(--color-white);
+    margin-bottom: 0.7rem;
   }
 }
 
@@ -36,12 +37,14 @@
     width: var(--container-width-md);
     gap: 4rem;
     row-gap: 3rem;
+  }
 
-    .offer__grid-head {
+  .offer__grid {
+    .grid__head {
       align-items: center;
       gap: 1rem;
 
-      .head__icon {
+      .grid__head-icon {
         font-size: 3rem;
       }
 
@@ -60,11 +63,11 @@
   .offer__grid {
     text-align: center;
 
-    .offer__grid-head {
+    .grid__head {
       flex-direction: column;
       gap: 0;
 
-      .head__icon {
+      .grid__head-icon {
         line-height: 3rem;
       }
 
