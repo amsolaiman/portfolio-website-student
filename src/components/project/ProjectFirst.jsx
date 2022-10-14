@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Tippy from "@tippyjs/react";
 import { Backdrop, Fade, Modal } from "@mui/material";
+// styles
 import "./projectfirst.scss";
-
+// store
 import project from "../../store/project";
 
 const projects = (data, setOpenModal, filterModal) => {

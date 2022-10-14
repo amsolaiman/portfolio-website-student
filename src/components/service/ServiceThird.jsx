@@ -1,11 +1,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
+// styles
 import "./servicethird.scss";
 import "swiper/css";
-
+// store
 import testimonial from "../../store/testimonial";
-
+// assets
 import { FaQuoteRight } from "react-icons/fa";
 
 const ServiceThird = () => {

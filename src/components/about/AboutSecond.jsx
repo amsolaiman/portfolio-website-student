@@ -1,7 +1,8 @@
 import React from "react";
 import Tippy from "@tippyjs/react";
+// styles
 import "./aboutsecond.scss";
-
+// store
 import interest from "../../store/interest";
 import experience from "../../store/experience";
 

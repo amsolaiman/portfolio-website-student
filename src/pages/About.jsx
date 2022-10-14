@@ -1,5 +1,5 @@
 import React from "react";
-
+// components
 import AboutHeader from "../components/about/AboutHeader";
 import AboutFirst from "../components/about/AboutFirst";
 import AboutSecond from "../components/about/AboutSecond";

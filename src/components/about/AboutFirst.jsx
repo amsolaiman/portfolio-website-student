@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// styles
 import "./aboutfirst.scss";
-
+// assets
 import { FaGraduationCap, FaAward } from "react-icons/fa";
 import ME from "../../assets/me.jpg";
 

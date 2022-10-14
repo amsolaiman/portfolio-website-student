@@ -1,5 +1,5 @@
 import React from "react";
-
+// assets
 import {
   SiAdobeillustrator,
   SiAdobephotoshop,
@@ -68,10 +68,6 @@ const interest = [
     icon: <SiJavascript />,
   },
   {
-    name: "Framer Motion",
-    icon: <SiFramer />,
-  },
-  {
     name: "Java",
     icon: <SiJava />,
   },
@@ -106,6 +102,10 @@ const interest = [
   {
     name: "Git",
     icon: <SiGit />,
+  },
+  {
+    name: "Framer Motion",
+    icon: <SiFramer />,
   },
   {
     name: "Nest JS",

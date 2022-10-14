@@ -1,3 +1,4 @@
+// assets
 import IMG1_2 from "../assets/certificate1-2.jpg";
 import IMG1_3 from "../assets/certificate1-3.jpg";
 import IMG2 from "../assets/certificate2.jpg";

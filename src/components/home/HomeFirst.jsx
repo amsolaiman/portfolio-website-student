@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// styles
 import "./homefirst.scss";
-
+// assets
 import { FaCode, FaGraduationCap, FaQuoteRight } from "react-icons/fa";
 import { IoColorPaletteSharp } from "react-icons/io5";
 import {

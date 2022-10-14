@@ -1,7 +1,8 @@
 import React from "react";
-import "./nav.scss";
-
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+// styles
+import "./nav.scss";
+// assets
 import {
   BiHome,
   BiUser,

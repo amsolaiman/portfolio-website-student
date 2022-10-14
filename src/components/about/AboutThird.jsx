@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCards, Pagination } from "swiper";
 import { Backdrop, Fade, Modal } from "@mui/material";
+// styles
 import "./aboutthird.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-cards";
-
+// store
 import certification from "../../store/certification";
 
 const AboutThird = () => {

@@ -1,8 +1,9 @@
 import React from "react";
+// styles
 import "./servicefirst.scss";
-
+// store
 import service from "../../store/service";
-
+// assets
 import { BiCheck } from "react-icons/bi";
 
 const ServiceFirst = () => {

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// styles
 import "./homesecond.scss";
-
+// store
 import project from "../../store/project";
 
 const HomeSecond = () => {

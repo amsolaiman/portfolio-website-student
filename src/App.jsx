@@ -1,8 +1,10 @@
+// dependencies
 import React, { useState, useRef, useMemo, useEffect } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+// styles
 import "./index.scss";
-
+// components
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
@@ -70,7 +72,7 @@ const App = () => {
         <>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 1.5 } }}
+            animate={{ opacity: 1, transition: { duration: 1 } }}
           >
             <Nav className={atFooter ? "nav__atfooter" : null} />
             <ScrollToTop>

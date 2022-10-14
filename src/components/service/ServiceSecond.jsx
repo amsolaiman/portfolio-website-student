@@ -1,6 +1,7 @@
 import React from "react";
+// styles
 import "./servicesecond.scss";
-
+// assets
 import { TbCup } from "react-icons/tb";
 import { RiNewspaperLine } from "react-icons/ri";
 import { CgWebsite } from "react-icons/cg";
