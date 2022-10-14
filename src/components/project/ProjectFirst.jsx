@@ -6,47 +6,8 @@ import "./projectfirst.scss";
 // store
 import project from "../../store/project";
 
-const projects = (data, setOpenModal, filterModal) => {
-  return (
-    <>
-      {data.map((project, index) => {
-        return (
-          <dic key={index} className="portfolio__item">
-            <div className="portfolio__item-image">
-              <img src={project.image} alt={project.alt} />
-            </div>
-            <div className="portfolio__content">
-              <h3>{project.name}</h3>
-              <span> {project.type} </span>
-              <div className="portfolio__content-cta">
-                <button
-                  onClick={() => {
-                    setOpenModal(true);
-                    filterModal(project.id);
-                  }}
-                  className="btn"
-                >
-                  Learn more
-                </button>
-                <div className="portfolio__content-icons">
-                  {project.technologies.map((tech, index) => {
-                    if (index <= 1) {
-                      return <div key={index}>{tech.icon}</div>;
-                    }
-                    return null;
-                  })}
-                </div>
-              </div>
-            </div>
-          </dic>
-        );
-      })}
-    </>
-  );
-};
-
 const ProjectFirst = () => {
-  /* project item modal */
+  //#region Project Modal
   const [openModal, setOpenModal] = useState(false);
   const [modalFiltered, setModalFiltered] = useState([]);
 
@@ -57,9 +18,9 @@ const ProjectFirst = () => {
       })
     );
   };
-  /* project item modal */
+  //#endregion
 
-  /* page item pagination */
+  //#region Items Pagination
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(6);
   const pageNumberLimit = 5;
@@ -124,9 +85,9 @@ const ProjectFirst = () => {
       return null;
     }
   });
-  /* page item pagination */
+  //#endregion
 
-  /* media query responsiveness */
+  //#region Media Query Responsiveness
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
@@ -155,7 +116,7 @@ const ProjectFirst = () => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, [windowSize.width]);
-  /* media query responsiveness */
+  //#endregion
 
   return (
     <>
@@ -207,7 +168,46 @@ const ProjectFirst = () => {
 
 export default ProjectFirst;
 
-function ModalView({ openModal, data, closeModal }) {
+const projects = (data, setOpenModal, filterModal) => {
+  return (
+    <>
+      {data.map((project, index) => {
+        return (
+          <dic key={index} className="portfolio__item">
+            <div className="portfolio__item-image">
+              <img src={project.image} alt={project.alt} />
+            </div>
+            <div className="portfolio__content">
+              <h3>{project.name}</h3>
+              <span> {project.type} </span>
+              <div className="portfolio__content-cta">
+                <button
+                  onClick={() => {
+                    setOpenModal(true);
+                    filterModal(project.id);
+                  }}
+                  className="btn"
+                >
+                  Learn more
+                </button>
+                <div className="portfolio__content-icons">
+                  {project.technologies.map((tech, index) => {
+                    if (index <= 1) {
+                      return <div key={index}>{tech.icon}</div>;
+                    }
+                    return null;
+                  })}
+                </div>
+              </div>
+            </div>
+          </dic>
+        );
+      })}
+    </>
+  );
+};
+
+const ModalView = ({openModal, data, closeModal}) => {
   return (
     <>
       {data.map((project, index) => {
@@ -261,4 +261,4 @@ function ModalView({ openModal, data, closeModal }) {
       })}
     </>
   );
-}
+};

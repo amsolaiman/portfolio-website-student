@@ -8,7 +8,7 @@ import { BsArrowUp } from "react-icons/bs";
 import BG from "../../assets/bg-header.jpg";
 
 const ContactHeader = () => {
-  /* header parallax effect */
+  //#region Header Parallax Effect
   let navigate = useNavigate();
 
   window.addEventListener("scroll", () => {
@@ -19,32 +19,34 @@ const ContactHeader = () => {
     first.style.top = value * 0.7 + "px";
     last.style.top = value * 1 + "px";
   });
-  /* header parallax effect */
+  //#endregion
 
   return (
-    <header id="contact__header">
-      <img src={BG} alt="bg-header" id="header_img" />
-      <div className="container header__container" id="header_text">
-        <h1 className="typewriter">
-          <Typewriter
-            options={{
-              autoStart: true,
-              loop: true,
-              delay: 70,
-              strings: [
-                "I would love to hear from you.",
-                "Let me help you achieve your goals.",
-                "I look forward to working with you.",
-                "Together let's make something amazing.",
-              ],
-            }}
-          />
-        </h1>
-        <Link onClick={() => navigate(-1)} className="back__button">
-          Back <BsArrowUp className="back__button-icon" />
-        </Link>
-      </div>
-    </header>
+    <>
+      <header id="contact__header">
+        <img src={BG} alt="bg-header" id="header_img" />
+        <div className="container header__container" id="header_text">
+          <h1 className="typewriter">
+            <Typewriter
+              options={{
+                autoStart: true,
+                loop: true,
+                delay: 70,
+                strings: [
+                  "I would love to hear from you.",
+                  "Let me help you achieve your goals.",
+                  "I look forward to working with you.",
+                  "Together let's make something amazing.",
+                ],
+              }}
+            />
+          </h1>
+          <Link onClick={() => navigate(-1)} className="back__button">
+            Back <BsArrowUp className="back__button-icon" />
+          </Link>
+        </div>
+      </header>
+    </>
   );
 };
 

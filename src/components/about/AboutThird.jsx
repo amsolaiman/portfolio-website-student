@@ -11,7 +11,7 @@ import "swiper/css/effect-cards";
 import certification from "../../store/certification";
 
 const AboutThird = () => {
-  /* certificate item modal */
+  //#region Certificate Modal
   const [openModal, setOpenModal] = useState(false);
   const [modalFiltered, setModalFiltered] = useState([]);
 
@@ -22,7 +22,7 @@ const AboutThird = () => {
       })
     );
   };
-  /* certificate item modal */
+  //#endregion
 
   return (
     <>
@@ -90,7 +90,7 @@ const AboutThird = () => {
 
 export default AboutThird;
 
-function ModalView({ openModal, data, closeModal }) {
+const ModalView = ({ openModal, data, closeModal }) => {
   return (
     <>
       {data.map((cert, index) => {
@@ -134,4 +134,4 @@ function ModalView({ openModal, data, closeModal }) {
       })}
     </>
   );
-}
+};

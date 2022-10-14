@@ -15,7 +15,7 @@ import Footer from "./components/footer/Footer";
 import Loader from "./components/loader/Loader";
 
 const App = () => {
-  /* loading screen */
+  //#region Loading Screen
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -24,9 +24,9 @@ const App = () => {
       setLoading(false);
     }, 3000);
   }, []);
-  /* loading screen */
+  //#endregion
 
-  /* navbar hide at footer */
+  //#region Navbar Hidden Function
   const targetRef = useRef(null);
   const [atFooter, setAtFooter] = useState(false);
 
@@ -56,7 +56,7 @@ const App = () => {
       }
     };
   }, [targetRef, options]);
-  /* navbar hide at footer */
+  //#endregion
 
   return (
     <>
