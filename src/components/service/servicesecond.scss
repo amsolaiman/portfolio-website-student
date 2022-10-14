@@ -59,6 +59,11 @@
       }
     }
 
+    .grid__caption,
+    .grid__content {
+      font-size: 0.9rem;
+    }
+
     .grid__content {
       color: var(--color-white);
       margin-bottom: 0.7rem;
@@ -112,6 +117,11 @@
       }
     }
 
+    .grid__caption,
+    .grid__content {
+      font-size: 0.9rem;
+    }
+
     .grid__content {
       color: var(--color-white);
       margin-bottom: 0.7rem;
@@ -153,10 +163,6 @@
           margin-bottom: 1rem;
           line-height: 1.5rem;
         }
-      }
-
-      .grid__caption {
-        font-size: 0.9rem;
       }
     }
   }
