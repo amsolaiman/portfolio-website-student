@@ -8,6 +8,7 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
 import BG from "../../assets/bg-header.jpg";
 
 const HomeHeader = () => {
+  /* header parallax effect */
   window.addEventListener("scroll", () => {
     let first = document.getElementById("header_img");
     let last = document.getElementById("header_text");
@@ -16,6 +17,7 @@ const HomeHeader = () => {
     first.style.top = value * 0.7 + "px";
     last.style.top = value * 1 + "px";
   });
+  /* header parallax effect */
 
   return (
     <header id="home_header">

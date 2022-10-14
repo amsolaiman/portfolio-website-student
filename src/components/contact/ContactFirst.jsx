@@ -10,6 +10,7 @@ import {
 } from "react-icons/ai";
 
 const ContactFirst = () => {
+  /* email form function */
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -33,6 +34,7 @@ const ContactFirst = () => {
 
     e.target.reset();
   };
+  /* email form function */
 
   return (
     <section>

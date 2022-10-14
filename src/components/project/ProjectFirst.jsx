@@ -46,7 +46,7 @@ const projects = (data, setOpenModal, filterModal) => {
 };
 
 const ProjectFirst = () => {
-  /* item modal view */
+  /* project item modal */
   const [openModal, setOpenModal] = useState(false);
   const [modalFiltered, setModalFiltered] = useState([]);
 
@@ -57,8 +57,9 @@ const ProjectFirst = () => {
       })
     );
   };
+  /* project item modal */
 
-  /* page pagination */
+  /* page item pagination */
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(6);
   const pageNumberLimit = 5;
@@ -123,6 +124,7 @@ const ProjectFirst = () => {
       return null;
     }
   });
+  /* page item pagination */
 
   /* media query responsiveness */
   const [windowSize, setWindowSize] = useState({
@@ -153,6 +155,7 @@ const ProjectFirst = () => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, [windowSize.width]);
+  /* media query responsiveness */
 
   return (
     <>

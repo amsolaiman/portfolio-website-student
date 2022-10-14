@@ -24,6 +24,7 @@ const App = () => {
       setLoading(false);
     }, 3000);
   }, []);
+  /* loading screen */
 
   /* navbar hide at footer */
   const targetRef = useRef(null);
@@ -55,6 +56,7 @@ const App = () => {
       }
     };
   }, [targetRef, options]);
+  /* navbar hide at footer */
 
   return (
     <>

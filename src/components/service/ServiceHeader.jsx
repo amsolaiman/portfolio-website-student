@@ -8,6 +8,7 @@ import { BsArrowUp } from "react-icons/bs";
 import BG from "../../assets/bg-header.jpg";
 
 const ServiceHeader = () => {
+  /* header parallax effect */
   let navigate = useNavigate();
 
   window.addEventListener("scroll", () => {
@@ -18,6 +19,7 @@ const ServiceHeader = () => {
     first.style.top = value * 0.7 + "px";
     last.style.top = value * 1 + "px";
   });
+  /* header parallax effect */
 
   return (
     <header id="service__header">

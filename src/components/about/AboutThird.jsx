@@ -11,6 +11,7 @@ import "swiper/css/effect-cards";
 import certification from "../../store/certification";
 
 const AboutThird = () => {
+  /* certificate item modal */
   const [openModal, setOpenModal] = useState(false);
   const [modalFiltered, setModalFiltered] = useState([]);
 
@@ -21,6 +22,7 @@ const AboutThird = () => {
       })
     );
   };
+  /* certificate item modal */
 
   return (
     <>
