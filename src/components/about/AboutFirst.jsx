@@ -36,16 +36,14 @@ const AboutFirst = () => {
             </div>
 
             <p>
-              Hello! I'm Moiz, a graduate of BS Information Technology at
-              Mindanao State University, Marawi City. I work as a freelance
-              designer and illustrator. I'm passionate about designing and
-              developing websites and software. Occasionally, I do interior
-              designing as well with CAD software. I am highly competent at
-              learning new technologies to further advance my skills and
-              expertise.
+              Hello! I'm Moiz. I'm passionate about designing and developing
+              websites and software. I also work as a freelance graphic designer
+              and illustrator. Occasionally, I do interior designing as well
+              with CAD software. I am highly competent at learning new
+              technologies to further advance my skills and expertise.
             </p>
 
-            <Link to="my-portfolio-website/contact" className="btn btn-primary">
+            <Link to="/contact" className="btn btn-primary">
               Let's talk
             </Link>
           </div>

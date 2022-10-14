@@ -1,122 +1,163 @@
-.offer__container {
-  display: column;
-  columns: 2;
-  gap: 10%;
-
-  & > * {
-    break-inside: avoid;
-  }
-
-  .grid__divider {
-    height: 2rem;
-  }
-}
-
-.offer__grid {
-  height: max-content;
-  color: var(--color-light);
-  border-radius: 2rem;
-  padding: 1.7rem 0 1.7rem 2rem;
-  background: linear-gradient(to right, var(--color-bg-variant), transparent);
-  transition: var(--transition);
-  cursor: default;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  .grid__head {
-    display: flex;
-    gap: 0.7rem;
-    align-items: center;
-
-    .grid__head-icon {
-      font-size: 2rem;
-      color: var(--color-primary);
-    }
-
-    h3 {
-      text-align: start;
-      color: var(--color-primary);
-      margin-bottom: 0.7rem;
-    }
-  }
-
-  .grid__content {
-    color: var(--color-white);
-    margin-bottom: 0.7rem;
-  }
+#service_second-m {
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {
+  #service_second-d {
+    display: none;
+  }
+
+  #service_second-m {
+    display: block;
+  }
+}
+
+/* #service_second desktop styles */
+
+#service_second-d {
   .offer__container {
-    width: var(--container-width-md);
-    gap: 4rem;
-    row-gap: 3rem;
+    display: column;
+    columns: 2;
+    gap: 10%;
+
+    & > * {
+      break-inside: avoid;
+    }
+
+    .grid__divider {
+      height: 2rem;
+    }
   }
 
   .offer__grid {
-    border-radius: 1.5rem;
-    padding: 1rem 0 1rem 1.5rem;
+    height: max-content;
+    color: var(--color-light);
+    border-radius: 2rem;
+    padding: 1.7rem 0 1.7rem 2rem;
+    background: linear-gradient(to right, var(--color-bg-variant), transparent);
+    transition: var(--transition);
+    cursor: default;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     .grid__head {
-      gap: 1rem;
+      display: flex;
+      gap: 0.7rem;
+      align-items: center;
 
       .grid__head-icon {
-        font-size: 3rem;
+        font-size: 2rem;
+        color: var(--color-primary);
       }
 
       h3 {
-        line-height: 1.7rem;
+        text-align: start;
+        color: var(--color-primary);
+        margin-bottom: 0.7rem;
       }
     }
 
-    .grid__caption {
-      font-size: 0.8rem;
+    .grid__content {
+      color: var(--color-white);
+      margin-bottom: 0.7rem;
+    }
+  }
+}
+
+/* #service_second mobile styles */
+
+#service_second-m {
+  .offer__container {
+    width: 70%;
+
+    .swiper-wrapper {
+      padding-bottom: 2rem;
+      align-items: center;
+    }
+
+    .swiper-pagination-bullet {
+      background: var(--color-white);
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--color-primary);
+    }
+  }
+
+  .offer__grid {
+    height: max-content;
+    color: var(--color-light);
+    border-radius: 2rem;
+    padding: 1.7rem 2rem;
+    background: linear-gradient(to right, var(--color-bg-variant), transparent);
+    transition: var(--transition);
+    cursor: default;
+
+    .grid__head {
+      display: flex;
+      gap: 0.7rem;
+      align-items: center;
+
+      .grid__head-icon {
+        font-size: 2rem;
+        color: var(--color-primary);
+      }
+
+      h3 {
+        text-align: start;
+        color: var(--color-primary);
+        margin-bottom: 0.7rem;
+      }
+    }
+
+    .grid__content {
+      color: var(--color-white);
+      margin-bottom: 0.7rem;
     }
   }
 }
 
 @media screen and (max-width: 600px) {
-  .offer__container {
-    display: grid;
-    grid-template-columns: 1fr;
+  #service_second-m {
+    .offer__container {
+      width: var(--container-width-md);
 
-    .grid__divider {
-      display: none;
-    }
-  }
-
-  .offer__grid {
-    height: auto;
-    padding: 1.2rem;
-    background: linear-gradient(
-      to bottom,
-      var(--color-bg-variant),
-      transparent 90%
-    );
-    text-align: center;
-
-    &:hover {
-      transform: scale(1) translateY(-12px);
-    }
-
-    .grid__head {
-      flex-direction: column;
-      gap: 0;
-
-      .grid__head-icon {
-        line-height: 3rem;
-      }
-
-      h3 {
-        text-align: center;
-        margin-bottom: 1rem;
+      .swiper-wrapper {
+        align-items: flex-start;
       }
     }
 
-    .grid__content {
-      font-size: 0.9rem;
+    .offer__grid {
+      height: auto;
+      padding: 1.2rem;
+      background: linear-gradient(
+        to bottom,
+        var(--color-bg-variant),
+        transparent 90%
+      );
+      text-align: center;
+
+      .grid__head {
+        flex-direction: column;
+        gap: 0;
+
+        .grid__head-icon {
+          font-size: 3rem;
+          line-height: 3rem;
+        }
+
+        h3 {
+          text-align: center;
+          margin-bottom: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      .grid__caption {
+        font-size: 0.9rem;
+      }
     }
   }
 }
