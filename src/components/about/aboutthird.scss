@@ -43,6 +43,7 @@
     }
 
     h4 {
+      line-height: 1.2rem;
       color: var(--color-bg);
     }
 
@@ -71,7 +72,7 @@
 
 @media screen and (max-width: 1024px) {
   .modal__container-cert {
-    width: 70%;
+    width: var(--container-width-lg);
   }
 }
 

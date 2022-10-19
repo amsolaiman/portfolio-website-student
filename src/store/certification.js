@@ -1,6 +1,7 @@
 // assets
 import IMG1_2 from "../assets/certificate1-2.jpg";
 import IMG1_3 from "../assets/certificate1-3.jpg";
+import IMG1_4 from "../assets/certificate1-4.jpg";
 import IMG2 from "../assets/certificate2.jpg";
 
 const certification = [
@@ -11,11 +12,15 @@ const certification = [
     images: [
       {
         image: IMG1_2,
-        alt: "certificate-1-2",
+        alt: "csharpunity-cert2",
       },
       {
         image: IMG1_3,
-        alt: "certificate-1-3",
+        alt: "csharpunity-cert3",
+      },
+      {
+        image: IMG1_4,
+        alt: "csharpunity-cert4",
       },
     ],
   },
@@ -26,7 +31,7 @@ const certification = [
     images: [
       {
         image: IMG2,
-        alt: "certificate-2",
+        alt: "cybersecurity-cert",
       },
     ],
   },

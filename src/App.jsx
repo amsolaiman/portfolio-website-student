@@ -26,7 +26,7 @@ const App = () => {
   }, []);
   //#endregion
 
-  //#region Navbar Hidden Function
+  //#region Navbar Hide Function
   const targetRef = useRef(null);
   const [atFooter, setAtFooter] = useState(false);
 
@@ -74,7 +74,7 @@ const App = () => {
         <>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 1 } }}
+            animate={{ opacity: 1, transition: { duration: 0.7 } }}
           >
             <Nav className={atFooter ? "nav__atfooter" : null} />
             <ScrollToTop>
