@@ -25,24 +25,26 @@ const ProjectHeader = () => {
     <>
       <header id="project__header">
         <img src={BG} alt="bg-header" id="header_img" />
-        <div className="container header__container" id="header_text">
-          <h1 className="typewriter">
-            <Typewriter
-              options={{
-                autoStart: true,
-                loop: true,
-                delay: 70,
-                strings: [
-                  "Capstone Projects",
-                  "Design Templates",
-                  "You may visit my Github repos.",
-                ],
-              }}
-            />
-          </h1>
-          <Link onClick={() => navigate(-1)} className="back__button">
-            Back <BsArrowUp className="back__button-icon" />
-          </Link>
+        <div className="container header__container">
+          <div className="header__container-content" id="header_text">
+            <h1 className="typewriter">
+              <Typewriter
+                options={{
+                  autoStart: true,
+                  loop: true,
+                  delay: 70,
+                  strings: [
+                    "Capstone Projects",
+                    "Design Templates",
+                    "You may visit my Github repos.",
+                  ],
+                }}
+              />
+            </h1>
+            <Link onClick={() => navigate(-1)} className="back__button">
+              Back <BsArrowUp className="back__button-icon" />
+            </Link>
+          </div>
         </div>
       </header>
     </>

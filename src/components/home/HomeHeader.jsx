@@ -23,57 +23,59 @@ const HomeHeader = () => {
     <>
       <header id="home_header">
         <img src={BG} alt="bg-header" id="header_img" />
-        <div className="container header__container" id="header_text">
-          <h5>Hello I'm</h5>
-          <h1>Abdul Moiz Solaiman</h1>
-          <h3>
-            <Typewriter
-              options={{
-                autoStart: true,
-                loop: true,
-                delay: 70,
-                strings: [
-                  "Frontend Developer",
-                  "UI/UX Designer",
-                  "Graphic Designer",
-                ],
-              }}
-            />
-          </h3>
+        <div className="container header__container">
+          <div className="header__container-content" id="header_text">
+            <h5>Hello I'm</h5>
+            <h1>Abdul Moiz Solaiman</h1>
+            <h3>
+              <Typewriter
+                options={{
+                  autoStart: true,
+                  loop: true,
+                  delay: 70,
+                  strings: [
+                    "Frontend Developer",
+                    "UI/UX Designer",
+                    "Graphic Designer",
+                  ],
+                }}
+              />
+            </h3>
 
-          <div className="header__cta">
-            <a
-              href="https://github.com/amsolaiman/my-portfolio-website/raw/main/src/assets/cv.pdf"
-              download
-              className="btn btn-cv"
-            >
-              Download CV
-            </a>
-            <Link to="/contact" className="btn btn-contact">
+            <div className="header__cta">
+              <a
+                href="https://github.com/amsolaiman/my-portfolio-website/raw/main/src/assets/cv.pdf"
+                download
+                className="btn btn-cv"
+              >
+                Download CV
+              </a>
+              <Link to="/contact" className="btn btn-contact">
+                Let's talk
+              </Link>
+            </div>
+
+            <div className="header__socials">
+              <a
+                href="https://www.linkedin.com/in/abdulmoiz-solaiman/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BsLinkedin />
+              </a>
+              <a
+                href="https://github.com/amsolaiman"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BsGithub />
+              </a>
+            </div>
+
+            <Link to="/contact" className="scroll__down">
               Let's talk
             </Link>
           </div>
-
-          <div className="header__socials">
-            <a
-              href="https://www.linkedin.com/in/abdulmoiz-solaiman/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <BsLinkedin />
-            </a>
-            <a
-              href="https://github.com/amsolaiman"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <BsGithub />
-            </a>
-          </div>
-
-          <Link to="/contact" className="scroll__down">
-            Let's talk
-          </Link>
         </div>
       </header>
     </>

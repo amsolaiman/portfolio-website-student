@@ -25,25 +25,27 @@ const ContactHeader = () => {
     <>
       <header id="contact__header">
         <img src={BG} alt="bg-header" id="header_img" />
-        <div className="container header__container" id="header_text">
-          <h1 className="typewriter">
-            <Typewriter
-              options={{
-                autoStart: true,
-                loop: true,
-                delay: 70,
-                strings: [
-                  "I would love to hear from you.",
-                  "Let me help you achieve your goals.",
-                  "I look forward to working with you.",
-                  "Together let's make something amazing.",
-                ],
-              }}
-            />
-          </h1>
-          <Link onClick={() => navigate(-1)} className="back__button">
-            Back <BsArrowUp className="back__button-icon" />
-          </Link>
+        <div className="container header__container">
+          <div className="header__container-content" id="header_text">
+            <h1 className="typewriter">
+              <Typewriter
+                options={{
+                  autoStart: true,
+                  loop: true,
+                  delay: 70,
+                  strings: [
+                    "I would love to hear from you.",
+                    "Let me help you achieve your goals.",
+                    "I look forward to working with you.",
+                    "Together let's make something amazing.",
+                  ],
+                }}
+              />
+            </h1>
+            <Link onClick={() => navigate(-1)} className="back__button">
+              Back <BsArrowUp className="back__button-icon" />
+            </Link>
+          </div>
         </div>
       </header>
     </>
