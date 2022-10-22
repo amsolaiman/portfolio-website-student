@@ -25,8 +25,8 @@ const ProjectHeader = () => {
     <>
       <header id="project__header">
         <img src={BG} alt="bg-header" id="header_img" />
-        <div className="container header__container">
-          <div className="header__container-content" id="header_text">
+        <div className="container header__container" id="header_text">
+          <div className="header__content">
             <h1 className="typewriter">
               <Typewriter
                 options={{
