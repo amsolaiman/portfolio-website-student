@@ -29,6 +29,7 @@ const ServiceThird = () => {
                 spaceBetween: 200,
               },
             }}
+            allowTouchMove={false}
             slidesPerView={"auto"}
             loop={true}
             centeredSlides={true}

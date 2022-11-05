@@ -8,9 +8,9 @@ import { BsArrowUp } from "react-icons/bs";
 import BG from "../../assets/bg-header.jpg";
 
 const ContactHeader = () => {
-  //#region Header Parallax Effect
   let navigate = useNavigate();
 
+  //#region Header Parallax Effect
   window.addEventListener("scroll", () => {
     let first = document.getElementById("header_img");
     let last = document.getElementById("header_text");

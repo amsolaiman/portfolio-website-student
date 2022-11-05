@@ -7,12 +7,12 @@ import { FaCode, FaGraduationCap, FaQuoteRight } from "react-icons/fa";
 import { IoColorPaletteSharp } from "react-icons/io5";
 import {
   SiAdobephotoshop,
-  SiAdobepremierepro,
   SiAdobexd,
   SiCsharp,
+  SiFigma,
+  SiGit,
   SiHtml5,
   SiJavascript,
-  SiQuasar,
   SiReact,
   SiTrello,
   SiUnity,
@@ -47,7 +47,7 @@ const HomeFirst = () => {
                 <SiHtml5 />
                 <SiJavascript />
                 <SiAdobephotoshop />
-                <SiAdobepremierepro />
+                <SiFigma />
                 <SiAdobexd />
                 <small>etc.</small>
               </div>
@@ -59,7 +59,7 @@ const HomeFirst = () => {
               </div>
               <div className="small__icons">
                 <SiReact />
-                <SiQuasar />
+                <SiGit />
                 <SiUnity />
                 <SiVisualstudio />
                 <SiTrello />
@@ -130,7 +130,7 @@ const HomeFirst = () => {
                 <SiHtml5 />
                 <SiJavascript />
                 <SiAdobephotoshop />
-                <SiAdobepremierepro />
+                <SiFigma />
                 <SiAdobexd />
                 <small>etc.</small>
               </div>
@@ -142,7 +142,7 @@ const HomeFirst = () => {
               </div>
               <div className="small__icons">
                 <SiReact />
-                <SiQuasar />
+                <SiGit />
                 <SiUnity />
                 <SiVisualstudio />
                 <SiTrello />

@@ -8,6 +8,7 @@ import {
   SiAutodesk,
   SiCsharp,
   SiCss3,
+  SiFigma,
   SiFramer,
   SiGit,
   SiHtml5,
@@ -40,16 +41,20 @@ const interest = [
     icon: <SiAdobephotoshop />,
   },
   {
-    name: "Material UI",
-    icon: <SiMaterialui />,
-  },
-  {
     name: "HTML5",
     icon: <SiHtml5 />,
   },
   {
-    name: "TypeScript",
-    icon: <SiTypescript />,
+    name: "JavaScript",
+    icon: <SiJavascript />,
+  },
+  {
+    name: "Unity",
+    icon: <SiUnity />,
+  },
+  {
+    name: "Material UI",
+    icon: <SiMaterialui />,
   },
   {
     name: "Quasar Framework",
@@ -64,16 +69,12 @@ const interest = [
     icon: <SiVuedotjs />,
   },
   {
-    name: "JavaScript",
-    icon: <SiJavascript />,
+    name: "TypeScript",
+    icon: <SiTypescript />,
   },
   {
     name: "Java",
     icon: <SiJava />,
-  },
-  {
-    name: "Unity",
-    icon: <SiUnity />,
   },
   {
     name: "SketchUp",
@@ -82,6 +83,10 @@ const interest = [
   {
     name: "Adobe Illustrator",
     icon: <SiAdobeillustrator />,
+  },
+  {
+    name: "Figma",
+    icon: <SiFigma />,
   },
   {
     name: "MySQL",
