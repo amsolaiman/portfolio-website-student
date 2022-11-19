@@ -4,7 +4,7 @@ const testimonial = [
     name: "Faridah D. Alango",
     job: "Guidance Services Specialist",
     organization: "Adviser, MSU-SPFC",
-    testimonial: `In my work attending to different areas in the academe its a big help having a different kind of website keeping files that is accessible & tailored fit 2 d needs. thanks i found this website by Abdul moiz.`,
+    testimonial: `In my work attending to different areas in the academe, it's a big help to have a student with different kinds of digital skills, who is willing to help me when I need assistance in creating digital assets. Thank God that I met Abdul Moiz.`,
   },
   {
     id: 2,
