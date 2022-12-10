@@ -25,12 +25,12 @@ const experience = [
         employer: "AP Global IT Solutions Inc.",
         duration: "Sept 2022 - Nov 2022",
       },
-      // {
-      //   name: "Software Developer",
-      //   type: "Full-time",
-      //   employer: "AP Global IT Solutions Inc.",
-      //   duration: "Dec 2022 - present",
-      // },
+      {
+        name: "Software Developer",
+        type: "Full-time",
+        employer: "AP Global IT Solutions Inc.",
+        duration: "Nov 2022 - present",
+      },
     ],
   },
 ];

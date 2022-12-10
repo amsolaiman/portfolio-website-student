@@ -42,8 +42,7 @@ const AboutSecond = () => {
                             <div>
                               <b>{job.employer}</b>
                             </div>
-                            <div>{job.type}</div>
-                            <div>{job.duration}</div>
+                            <div>{`${job.type}, ${job.duration}`}</div>
                           </div>
                         );
                       })}
