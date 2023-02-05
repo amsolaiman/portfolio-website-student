@@ -59,9 +59,9 @@ const ContactFirst = () => {
             <article className="contact__option">
               <AiOutlineWhatsApp className="contact__option-icon" />
               <h4>WhatsApp</h4>
-              <h5>+63 909 020 6852</h5>
+              <h5>+63 985 607 7909</h5>
               <a
-                href="https://api.whatsapp.com/send?phone=639090206852"
+                href="https://api.whatsapp.com/send?phone=639856077909"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -81,6 +81,7 @@ const ContactFirst = () => {
               </a>
             </article>
           </div>
+
           <form ref={form} onSubmit={sendEmail}>
             <input
               type="text"

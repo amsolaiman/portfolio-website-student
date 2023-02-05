@@ -17,7 +17,7 @@ const project = [
     id: 1,
     name: "mBALING Admin System (Desktop)",
     type: "Capstone Project",
-    description: `A student housing management system for on-campus housing firms in the Mindanao State University campus. This is the desktop system of the project that administers the user records and the creation and deletion of user accounts.`,
+    description: `A student housing management system for on-campus housing establishments in the Mindanao State University campus. This is the desktop system of the project that administers the user records and the creation and deletion of user accounts.`,
     image: IMG1,
     alt: "mbaling-desktop",
     technologies: [
@@ -57,7 +57,7 @@ const project = [
     id: 2,
     name: "mBALING App (Mobile)",
     type: "Capstone Project",
-    description: `A student housing management system for on-campus housing firms in the Mindanao State University campus. This is the mobile system of the project that manages the activities and displays the content posted by the users.`,
+    description: `A student housing management system for on-campus housing establishments in the Mindanao State University campus. This is the mobile system of the project that manages the activities and displays the content posted by the users.`,
     image: IMG2,
     alt: "mbaling-mobile",
     technologies: [
