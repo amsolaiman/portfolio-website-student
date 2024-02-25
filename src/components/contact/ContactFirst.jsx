@@ -45,8 +45,10 @@ const ContactFirst = () => {
         <div className="contact__options">
           <article className="contact__option">
             <AiOutlineMail className="contact__option-icon" />
+
             <h4>Email</h4>
             <h5>solaiman.am85@s.msumain.edu.ph</h5>
+
             <a
               href="mailto:solaiman.am85@s.msumain.edu.ph"
               target="_blank"
@@ -58,8 +60,10 @@ const ContactFirst = () => {
 
           <article className="contact__option">
             <AiOutlineWhatsApp className="contact__option-icon" />
+
             <h4>WhatsApp</h4>
             <h5>+63 985 464 8525</h5>
+
             <a
               href="https://api.whatsapp.com/send?phone=639854648528"
               target="_blank"
@@ -71,8 +75,10 @@ const ContactFirst = () => {
 
           <article className="contact__option">
             <AiOutlineLinkedin className="contact__option-icon" />
+
             <h4>LinkedIn</h4>
             <h5>Abdul Moiz Solaiman</h5>
+            
             <a
               href="https://www.linkedin.com/in/abdulmoiz-solaiman/"
               target="_blank"
