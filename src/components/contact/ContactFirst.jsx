@@ -18,7 +18,7 @@ const ContactFirst = () => {
 
     emailjs
       .sendForm(
-        "service_2lrg4yp",
+        "service_cysmfev",
         "template_0inbrv5",
         form.current,
         "uRYW8maA1hDnXmMP_"
@@ -47,9 +47,9 @@ const ContactFirst = () => {
             <article className="contact__option">
               <AiOutlineMail className="contact__option-icon" />
               <h4>Email</h4>
-              <h5>abdulmoiz.solaiman@gmail.com</h5>
+              <h5>solaiman.am85@s.msumain.edu.ph</h5>
               <a
-                href="mailto:abdulmoiz.solaiman@gmail.com"
+                href="mailto:solaiman.am85@s.msumain.edu.ph"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -59,9 +59,9 @@ const ContactFirst = () => {
             <article className="contact__option">
               <AiOutlineWhatsApp className="contact__option-icon" />
               <h4>WhatsApp</h4>
-              <h5>+63 985 607 7909</h5>
+              <h5>+63 985 464 8525</h5>
               <a
-                href="https://api.whatsapp.com/send?phone=639856077909"
+                href="https://api.whatsapp.com/send?phone=639854648528"
                 target="_blank"
                 rel="noreferrer"
               >

@@ -5,6 +5,7 @@ import IMG1_3 from "../assets/certificate1-3.jpg";
 import IMG1_4 from "../assets/certificate1-4.jpg";
 import IMG1_5 from "../assets/certificate1-5.jpg";
 import IMG2 from "../assets/certificate2.jpg";
+import IMG3 from "../assets/certificate3.jpg";
 
 const certification = [
   {
@@ -42,6 +43,17 @@ const certification = [
       {
         image: IMG2,
         alt: "cybersecurity-cert",
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Using HTML and CSS to Design a Website",
+    type: "Course Certificate",
+    images: [
+      {
+        image: IMG3,
+        alt: "dict-html-css-cert",
       },
     ],
   },
