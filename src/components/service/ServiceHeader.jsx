@@ -1,11 +1,11 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import { Link, useNavigate } from "react-router-dom";
-// styles
-import "./serviceheader.scss";
 // assets
 import { BsArrowUp } from "react-icons/bs";
 import BG from "../../assets/bg-header.jpg";
+// styles
+import "./serviceheader.scss";
 
 const ServiceHeader = () => {
   //#region Header Parallax Effect
@@ -22,34 +22,34 @@ const ServiceHeader = () => {
   //#endregion
 
   return (
-    <>
-      <header id="service__header">
-        <img src={BG} alt="bg-header" id="header_img" />
-        <div className="container header__container" id="header_text">
-          <div className="header__content">
-            <h1 className="typewriter">
-              <Typewriter
-                options={{
-                  autoStart: true,
-                  loop: true,
-                  delay: 70,
-                  strings: [
-                    "Freelancing",
-                    "Product Prototyping",
-                    "UI Developing",
-                    "Designing and Editing",
-                    "Feel free to contact me.",
-                  ],
-                }}
-              />
-            </h1>
-            <Link onClick={() => navigate(-1)} className="back__button">
-              Back <BsArrowUp className="back__button-icon" />
-            </Link>
-          </div>
+    <header id="service__header">
+      <img src={BG} alt="bg-header" id="header_img" />
+
+      <div className="container header__container" id="header_text">
+        <div className="header__content">
+          <h1 className="typewriter">
+            <Typewriter
+              options={{
+                autoStart: true,
+                loop: true,
+                delay: 70,
+                strings: [
+                  "Freelancing",
+                  "Product Prototyping",
+                  "UI Developing",
+                  "Designing and Editing",
+                  "Feel free to contact me.",
+                ],
+              }}
+            />
+          </h1>
+
+          <Link onClick={() => navigate(-1)} className="back__button">
+            Back <BsArrowUp className="back__button-icon" />
+          </Link>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 

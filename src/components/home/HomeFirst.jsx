@@ -1,23 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// assets
+import { IoColorPaletteSharp } from "react-icons/io5";
+import { FaCode, FaGraduationCap, FaQuoteRight } from "react-icons/fa";
+import {
+  SiGit,
+  SiFigma,
+  SiHtml5,
+  SiReact,
+  SiUnity,
+  SiCsharp,
+  SiTrello,
+  SiAdobexd,
+  SiJavascript,
+  SiVisualstudio,
+  SiAdobephotoshop,
+} from "react-icons/si";
 // styles
 import "./homefirst.scss";
-// assets
-import { FaCode, FaGraduationCap, FaQuoteRight } from "react-icons/fa";
-import { IoColorPaletteSharp } from "react-icons/io5";
-import {
-  SiAdobephotoshop,
-  SiAdobexd,
-  SiCsharp,
-  SiFigma,
-  SiGit,
-  SiHtml5,
-  SiJavascript,
-  SiReact,
-  SiTrello,
-  SiUnity,
-  SiVisualstudio,
-} from "react-icons/si";
 
 const HomeFirst = () => {
   return (
@@ -31,17 +31,20 @@ const HomeFirst = () => {
                 <FaGraduationCap className="intro__icon" />
                 <h5>Education</h5>
               </div>
+
               <small>
                 Information Technology
                 <br />
                 <b>Mindanao State University</b>
               </small>
             </article>
+
             <article className="intro__card">
               <div>
                 <IoColorPaletteSharp className="intro__icon" />
                 <h5>Interests</h5>
               </div>
+
               <div className="small__icons">
                 <SiCsharp />
                 <SiHtml5 />
@@ -52,11 +55,13 @@ const HomeFirst = () => {
                 <small>etc.</small>
               </div>
             </article>
+
             <article className="intro__card">
               <div>
                 <FaCode className="intro__icon" />
                 <h5>Technologies</h5>
               </div>
+
               <div className="small__icons">
                 <SiReact />
                 <SiGit />
@@ -81,10 +86,12 @@ const HomeFirst = () => {
               illustrator, and have helped a few organizations with their needs
               for digital design support.
             </p>
+
             <div className="intro__content-cta">
               <Link to="/about" className="btn btn-primary">
                 About me
               </Link>
+
               <Link to="/service" className="btn">
                 Services
               </Link>
@@ -109,10 +116,12 @@ const HomeFirst = () => {
               illustrator, and have helped a few organizations with their needs
               for digital design support.
             </p>
+
             <div className="intro__content-cta">
               <Link to="/about" className="btn btn-primary">
                 About me
               </Link>
+
               <Link to="/service" className="btn">
                 Services
               </Link>
@@ -125,6 +134,7 @@ const HomeFirst = () => {
                 <IoColorPaletteSharp className="intro__icon" />
                 <h5>Interests</h5>
               </div>
+
               <div className="small__icons">
                 <SiCsharp />
                 <SiHtml5 />
@@ -135,11 +145,13 @@ const HomeFirst = () => {
                 <small>etc.</small>
               </div>
             </article>
+
             <article className="intro__card">
               <div>
                 <FaCode className="intro__icon" />
                 <h5>Technologies</h5>
               </div>
+
               <div className="small__icons">
                 <SiReact />
                 <SiGit />

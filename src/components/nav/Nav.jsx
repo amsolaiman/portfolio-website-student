@@ -1,7 +1,5 @@
 import React from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-// styles
-import "./nav.scss";
 // assets
 import {
   BiHome,
@@ -10,6 +8,8 @@ import {
   BiBriefcase,
   BiMessageSquareDetail,
 } from "react-icons/bi";
+// styles
+import "./nav.scss";
 
 const Nav = ({ className }) => {
   return (
@@ -17,15 +17,19 @@ const Nav = ({ className }) => {
       <NavLink to="/">
         <BiHome />
       </NavLink>
+
       <NavLink to="/about">
         <BiUser />
       </NavLink>
+
       <NavLink to="/project">
         <BiBriefcase />
       </NavLink>
+
       <NavLink to="/service">
         <BiPalette />
       </NavLink>
+
       <NavLink to="/contact">
         <BiMessageSquareDetail />
       </NavLink>
@@ -37,6 +41,7 @@ export default Nav;
 
 function NavLink({ to, children, ...props }) {
   const resolvePath = useResolvedPath(to);
+
   const isActive = useMatch({ path: resolvePath.pathname, end: true });
 
   return (

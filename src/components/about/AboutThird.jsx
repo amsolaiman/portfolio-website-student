@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCards, Pagination } from "swiper";
 import { Backdrop, Fade, Modal } from "@mui/material";
+import { Autoplay, EffectCards, Pagination } from "swiper";
+// store
+import certification from "../../store/certification";
 // styles
-import "./aboutthird.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-cards";
-// store
-import certification from "../../store/certification";
+import "./aboutthird.scss";
 
 const AboutThird = () => {
   //#region Certificate Modal
@@ -59,10 +59,13 @@ const AboutThird = () => {
               <SwiperSlide key={index} className="certificate__item">
                 {cert.images.map((image, index) => {
                   if (index === 0) {
-                    return <img src={image.image} alt={image.alt} />;
+                    return (
+                      <img key={index} src={image.image} alt={image.alt} />
+                    );
                   }
                   return null;
                 })}
+
                 <div
                   onClick={() => {
                     setOpenModal(true);

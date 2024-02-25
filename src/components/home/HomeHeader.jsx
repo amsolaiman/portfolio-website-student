@@ -1,11 +1,12 @@
 import React from "react";
-import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
+import Typewriter from "typewriter-effect";
+// assets
+import CV from "../../assets/cv.pdf";
+import BG from "../../assets/bg-header.jpg";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 // styles
 import "./homeheader.scss";
-// assets
-import { BsLinkedin, BsGithub } from "react-icons/bs";
-import BG from "../../assets/bg-header.jpg";
 
 const HomeHeader = () => {
   //#region Header Parallax Effect
@@ -20,65 +21,63 @@ const HomeHeader = () => {
   //#endregion
 
   return (
-    <>
-      <header id="home_header">
-        <img src={BG} alt="bg-header" id="header_img" />
-        <div className="container header__container">
-          <div className="header__container-content" id="header_text">
-            <h5>Hello I'm</h5>
-            <h1>Abdul Moiz Solaiman</h1>
-            <h3>
-              <Typewriter
-                options={{
-                  autoStart: true,
-                  loop: true,
-                  delay: 70,
-                  strings: [
-                    "Frontend Developer",
-                    "UI/UX Designer",
-                    "Graphic Designer",
-                  ],
-                }}
-              />
-            </h3>
+    <header id="home_header">
+      <img src={BG} alt="bg-header" id="header_img" />
 
-            <div className="header__cta">
-              <a
-                href="https://github.com/amsolaiman/my-portfolio-website/raw/main/src/assets/cv.pdf"
-                download
-                className="btn btn-cv"
-              >
-                Download CV
-              </a>
-              <Link to="/contact" className="btn btn-contact">
-                Let's talk
-              </Link>
-            </div>
+      <div className="container header__container">
+        <div className="header__container-content" id="header_text">
+          <h5>Hello I'm</h5>
+          <h1>Abdul Moiz Solaiman</h1>
 
-            <div className="header__socials">
-              <a
-                href="https://www.linkedin.com/in/abdulmoiz-solaiman/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <BsLinkedin />
-              </a>
-              <a
-                href="https://github.com/amsolaiman"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <BsGithub />
-              </a>
-            </div>
+          <h3>
+            <Typewriter
+              options={{
+                autoStart: true,
+                loop: true,
+                delay: 70,
+                strings: [
+                  "Frontend Developer",
+                  "UI/UX Designer",
+                  "Graphic Designer",
+                ],
+              }}
+            />
+          </h3>
 
-            <Link to="/contact" className="scroll__down">
+          <div className="header__cta">
+            <a href={CV} download className="btn btn-cv">
+              Download CV
+            </a>
+
+            <Link to="/contact" className="btn btn-contact">
               Let's talk
             </Link>
           </div>
+
+          <div className="header__socials">
+            <a
+              href="https://www.linkedin.com/in/abdulmoiz-solaiman/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BsLinkedin />
+            </a>
+
+            <a
+              href="https://github.com/amsolaiman"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BsGithub />
+            </a>
+          </div>
+
+          <Link to="/contact" className="scroll__down">
+            Let's talk
+          </Link>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 

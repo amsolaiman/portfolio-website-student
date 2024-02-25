@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Tippy from "@tippyjs/react";
 import { Backdrop, Fade, Modal } from "@mui/material";
-// styles
-import "./projectfirst.scss";
 // store
 import project from "../../store/project";
+// styles
+import "./projectfirst.scss";
 
 const ProjectFirst = () => {
   //#region Project Modal
@@ -128,6 +128,7 @@ const ProjectFirst = () => {
           <div className="portfolio__item-container">
             {projects(currentItems, setOpenModal, filterModal)}
           </div>
+
           <ul className="portfolio__pagination">
             <li>
               <button
@@ -137,9 +138,13 @@ const ProjectFirst = () => {
                 {"<"}
               </button>
             </li>
+
             {pageDecrease}
+
             {pagination}
+
             {pageIncrease}
+
             <li>
               <button
                 onClick={handleClickNext}
@@ -151,6 +156,7 @@ const ProjectFirst = () => {
               </button>
             </li>
           </ul>
+
           <div className="portfolio__other">
             <small>Some projects are restricted by NDA.</small>
           </div>
@@ -177,9 +183,11 @@ const projects = (data, setOpenModal, filterModal) => {
             <div className="portfolio__item-image">
               <img src={project.image} alt={project.alt} />
             </div>
+
             <div className="portfolio__content">
               <h3>{project.name}</h3>
               <span> {project.type} </span>
+
               <div className="portfolio__content-cta">
                 <button
                   onClick={() => {
@@ -190,6 +198,7 @@ const projects = (data, setOpenModal, filterModal) => {
                 >
                   Learn more
                 </button>
+
                 <div className="portfolio__content-icons">
                   {project.technologies.map((tech, index) => {
                     if (index <= 1) {
@@ -207,7 +216,7 @@ const projects = (data, setOpenModal, filterModal) => {
   );
 };
 
-const ModalView = ({openModal, data, closeModal}) => {
+const ModalView = ({ openModal, data, closeModal }) => {
   return (
     <>
       {data.map((project, index) => {
@@ -229,11 +238,12 @@ const ModalView = ({openModal, data, closeModal}) => {
                   <span> {project.type} </span>
                   <br /> {project.description}
                 </p>
+
                 <div className="modal__icons">
                   {project.technologies.map((tech, index) => {
                     return (
-                      <Tippy content={tech.name} placement="bottom">
-                        <small key={index}>{tech.icon}</small>
+                      <Tippy key={index} content={tech.name} placement="bottom">
+                        <small>{tech.icon}</small>
                       </Tippy>
                     );
                   })}

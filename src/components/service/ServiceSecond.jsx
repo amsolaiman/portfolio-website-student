@@ -1,16 +1,16 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
-// styles
-import "./servicesecond.scss";
-import "swiper/css";
-import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
 // assets
 import { TbCup } from "react-icons/tb";
-import { RiNewspaperLine } from "react-icons/ri";
+import { Divider } from "@mui/material";
 import { CgWebsite } from "react-icons/cg";
 import { BiHomeHeart } from "react-icons/bi";
-import { Divider } from "@mui/material";
+import { RiNewspaperLine } from "react-icons/ri";
+// styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "./servicesecond.scss";
 
 const ServiceSecond = () => {
   return (
@@ -28,10 +28,12 @@ const ServiceSecond = () => {
               </span>
               <h3>Design your product labels</h3>
             </div>
+
             <div className="grid__content">
               I can help you design graphic assets to make your products stand
               out, so you can achieve your business goals.
             </div>
+
             <div className="grid__caption">
               Product labels help a customer differentiate the product from
               other items, especially if it's placed next to similar options.
@@ -49,10 +51,12 @@ const ServiceSecond = () => {
               </span>
               <h3>Design your marketing materials</h3>
             </div>
+
             <div className="grid__content">
               I can help you create graphic materials for your ads, banners,
               brochures, business cards, logos, and more.
             </div>
+
             <div className="grid__caption">
               Good marketing materials give the viewer a glimpse of things like
               the value proposition, vision, and culture within an organization.
@@ -69,10 +73,12 @@ const ServiceSecond = () => {
               </span>
               <h3>Build your personal website</h3>
             </div>
+
             <div className="grid__content">
               I can help you with building your own website or upgrading an
               existing one, and deploy and manage it online.
             </div>
+
             <div className="grid__caption">
               Setting up your own website allows you to showcase your work and
               provide proof of your abilities. This is a must if you are in one
@@ -83,6 +89,7 @@ const ServiceSecond = () => {
           </div>
 
           <Divider className="grid__divider" />
+
           <div className="offer__grid">
             <div className="grid__head">
               <span className="grid__head-icon">
@@ -90,10 +97,12 @@ const ServiceSecond = () => {
               </span>
               <h3>Make your dreamhouse 3D</h3>
             </div>
+
             <div className="grid__content">
               I can help you transform your dream house blueprint into a 3D
               model that will help you visualize its finished design.
             </div>
+
             <div className="grid__caption">
               Using 3D Modelling for architectural construction and design
               allows the architect to make constant changes as the 3D model is
@@ -131,10 +140,12 @@ const ServiceSecond = () => {
               </span>
               <h3>Design your product labels</h3>
             </div>
+
             <div className="grid__content">
               I can help you design graphic assets to make your products stand
               out, so you can achieve your business goals.
             </div>
+
             <div className="grid__caption">
               Product labels help a customer differentiate the product from
               other items, especially if it's placed next to similar options.
@@ -151,10 +162,12 @@ const ServiceSecond = () => {
               </span>
               <h3>Design your marketing materials</h3>
             </div>
+
             <div className="grid__content">
               I can help you create graphic materials for your ads, banners,
               brochures, business cards, logos, and more.
             </div>
+
             <div className="grid__caption">
               Good marketing materials give the viewer a glimpse of things like
               the value proposition, vision, and culture within an organization.
@@ -171,10 +184,12 @@ const ServiceSecond = () => {
               </span>
               <h3>Build your personal website</h3>
             </div>
+
             <div className="grid__content">
               I can help you with building your own website or upgrading an
               existing one, and deploy and manage it online.
             </div>
+
             <div className="grid__caption">
               Setting up your own website allows you to showcase your work and
               provide proof of your abilities. This is a must if you are in one
@@ -191,10 +206,12 @@ const ServiceSecond = () => {
               </span>
               <h3>Make your dreamhouse 3D</h3>
             </div>
+
             <div className="grid__content">
               I can help you transform your dream house blueprint into a 3D
               model that will help you visualize its finished design.
             </div>
+
             <div className="grid__caption">
               Using 3D Modelling for architectural construction and design
               allows the architect to make constant changes as the 3D model is

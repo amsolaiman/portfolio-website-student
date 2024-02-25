@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// styles
-import "./homesecond.scss";
 // store
 import project from "../../store/project";
+// styles
+import "./homesecond.scss";
 
 const HomeSecond = () => {
   return (
@@ -19,12 +19,14 @@ const HomeSecond = () => {
           {project.map((project, index) => {
             if (index === 0) {
               return (
-                <div className="project__item item_left">
+                <div key={index} className="project__item item_left">
                   <div className="project__item-image">
                     <img src={project.image} alt={project.alt} />
                   </div>
+
                   <div className="project__info">
                     <h3>{project.name}</h3>
+
                     <div className="project__cta">
                       {project.credentials.map((link, index) => {
                         if (index === 0) {
@@ -42,6 +44,7 @@ const HomeSecond = () => {
                         }
                         return null;
                       })}
+
                       <div className="item__icons">
                         {project.technologies.map((tech, index) => {
                           if (index <= 1) {
@@ -61,12 +64,14 @@ const HomeSecond = () => {
           {project.map((project, index) => {
             if (index === 1) {
               return (
-                <div className="project__item item_right">
+                <div key={index} className="project__item item_right">
                   <div className="project__item-image">
                     <img src={project.image} alt={project.alt} />
                   </div>
+
                   <div className="project__info">
                     <h3>mBALING App (Mobile)</h3>
+
                     <div className="project__cta">
                       {project.credentials.map((link, index) => {
                         if (index === 0) {
@@ -84,6 +89,7 @@ const HomeSecond = () => {
                         }
                         return null;
                       })}
+
                       <div className="item__icons">
                         {project.technologies.map((tech, index) => {
                           if (index <= 1) {
@@ -102,6 +108,7 @@ const HomeSecond = () => {
 
           <div className="project__notes">
             <small>Some projects are restricted by NDA.</small>
+
             <Link to="/project" className="btn btn-primary">
               View more
             </Link>
@@ -123,8 +130,10 @@ const HomeSecond = () => {
                     <div className="project__item-image">
                       <img src={project.image} alt={project.alt} />
                     </div>
+
                     <div className="project__info">
                       <h3>{project.name}</h3>
+
                       <div className="project__cta">
                         {project.credentials.map((link, index) => {
                           if (index === 0) {
@@ -142,6 +151,7 @@ const HomeSecond = () => {
                           }
                           return null;
                         })}
+
                         <div className="item__icons">
                           {project.technologies.map((tech, index) => {
                             if (index <= 1) {
@@ -161,6 +171,7 @@ const HomeSecond = () => {
 
           <div className="project__notes">
             <small>Some projects are restricted by NDA.</small>
+
             <Link to="/project" className="btn btn-primary">
               View more
             </Link>
